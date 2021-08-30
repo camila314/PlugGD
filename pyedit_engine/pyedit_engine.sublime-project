@@ -1,0 +1,68 @@
+{
+    "build_systems":
+    [
+        {
+			"file_regex": "(.+[^:]):(\\d+):(\\d+): (?:fatal )?((?:error|warning): .+)$",
+			"name": "pyedit_engine (OSX)",
+			"shell_cmd": "make -j4",
+			"syntax": "Packages/CMakeBuilder/Syntax/Make.sublime-syntax",
+			"variants":
+			[
+				{
+					"name": "clean",
+					"shell_cmd": "make -j4 clean",
+				},
+				{
+					"name": "rebuild_cache",
+					"shell_cmd": "make -j4 rebuild_cache",
+				},
+				{
+					"name": "CyBindings",
+					"shell_cmd": "make -j4 CyBindings",
+				},
+				{
+					"name": "pyedit_engine",
+					"shell_cmd": "make -j4 pyedit_engine",
+				},
+				{
+					"name": "engine.o",
+					"shell_cmd": "make -j4 engine.o",
+				},
+				{
+					"name": "engine.i",
+					"shell_cmd": "make -j4 engine.i",
+				},
+				{
+					"name": "engine.s",
+					"shell_cmd": "make -j4 engine.s",
+				},
+				{
+					"name": "thread_control.o",
+					"shell_cmd": "make -j4 thread_control.o",
+				},
+				{
+					"name": "thread_control.i",
+					"shell_cmd": "make -j4 thread_control.i",
+				},
+				{
+					"name": "thread_control.s",
+					"shell_cmd": "make -j4 thread_control.s",
+				},
+			],
+			"working_dir": "${project_path}/build",
+		},
+	],
+    "folders":
+    [
+        {
+            "path": ".",
+        }
+	],
+    "settings":
+    {
+        "cmake":
+        {
+            "build_folder": "${project_path}/build",
+        },
+    },
+}

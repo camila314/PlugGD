@@ -1,0 +1,235 @@
+{
+    "build_systems":
+    [
+        {
+			"file_regex": "(.+[^:]):(\\d+):(\\d+): (?:fatal )?((?:error|warning): .+)$",
+			"name": "pyedit (OSX)",
+			"shell_cmd": "make -j4",
+			"syntax": "Packages/CMakeBuilder/Syntax/Make.sublime-syntax",
+			"variants":
+			[
+				{
+					"name": "clean",
+					"shell_cmd": "make -j4 clean",
+				},
+				{
+					"name": "install",
+					"shell_cmd": "make -j4 install",
+				},
+				{
+					"name": "install/local",
+					"shell_cmd": "make -j4 install/local",
+				},
+				{
+					"name": "install/strip",
+					"shell_cmd": "make -j4 install/strip",
+				},
+				{
+					"name": "list_install_components",
+					"shell_cmd": "make -j4 list_install_components",
+				},
+				{
+					"name": "package_source",
+					"shell_cmd": "make -j4 package_source",
+				},
+				{
+					"name": "rebuild_cache",
+					"shell_cmd": "make -j4 rebuild_cache",
+				},
+				{
+					"name": "Cackit",
+					"shell_cmd": "make -j4 Cackit",
+				},
+				{
+					"name": "Continuous",
+					"shell_cmd": "make -j4 Continuous",
+				},
+				{
+					"name": "ContinuousBuild",
+					"shell_cmd": "make -j4 ContinuousBuild",
+				},
+				{
+					"name": "ContinuousConfigure",
+					"shell_cmd": "make -j4 ContinuousConfigure",
+				},
+				{
+					"name": "ContinuousCoverage",
+					"shell_cmd": "make -j4 ContinuousCoverage",
+				},
+				{
+					"name": "ContinuousMemCheck",
+					"shell_cmd": "make -j4 ContinuousMemCheck",
+				},
+				{
+					"name": "ContinuousStart",
+					"shell_cmd": "make -j4 ContinuousStart",
+				},
+				{
+					"name": "ContinuousSubmit",
+					"shell_cmd": "make -j4 ContinuousSubmit",
+				},
+				{
+					"name": "ContinuousTest",
+					"shell_cmd": "make -j4 ContinuousTest",
+				},
+				{
+					"name": "ContinuousUpdate",
+					"shell_cmd": "make -j4 ContinuousUpdate",
+				},
+				{
+					"name": "CyBindings",
+					"shell_cmd": "make -j4 CyBindings",
+				},
+				{
+					"name": "Experimental",
+					"shell_cmd": "make -j4 Experimental",
+				},
+				{
+					"name": "ExperimentalBuild",
+					"shell_cmd": "make -j4 ExperimentalBuild",
+				},
+				{
+					"name": "ExperimentalConfigure",
+					"shell_cmd": "make -j4 ExperimentalConfigure",
+				},
+				{
+					"name": "ExperimentalCoverage",
+					"shell_cmd": "make -j4 ExperimentalCoverage",
+				},
+				{
+					"name": "ExperimentalMemCheck",
+					"shell_cmd": "make -j4 ExperimentalMemCheck",
+				},
+				{
+					"name": "ExperimentalStart",
+					"shell_cmd": "make -j4 ExperimentalStart",
+				},
+				{
+					"name": "ExperimentalSubmit",
+					"shell_cmd": "make -j4 ExperimentalSubmit",
+				},
+				{
+					"name": "ExperimentalTest",
+					"shell_cmd": "make -j4 ExperimentalTest",
+				},
+				{
+					"name": "ExperimentalUpdate",
+					"shell_cmd": "make -j4 ExperimentalUpdate",
+				},
+				{
+					"name": "Nightly",
+					"shell_cmd": "make -j4 Nightly",
+				},
+				{
+					"name": "NightlyBuild",
+					"shell_cmd": "make -j4 NightlyBuild",
+				},
+				{
+					"name": "NightlyConfigure",
+					"shell_cmd": "make -j4 NightlyConfigure",
+				},
+				{
+					"name": "NightlyCoverage",
+					"shell_cmd": "make -j4 NightlyCoverage",
+				},
+				{
+					"name": "NightlyMemCheck",
+					"shell_cmd": "make -j4 NightlyMemCheck",
+				},
+				{
+					"name": "NightlyMemoryCheck",
+					"shell_cmd": "make -j4 NightlyMemoryCheck",
+				},
+				{
+					"name": "NightlyStart",
+					"shell_cmd": "make -j4 NightlyStart",
+				},
+				{
+					"name": "NightlySubmit",
+					"shell_cmd": "make -j4 NightlySubmit",
+				},
+				{
+					"name": "NightlyTest",
+					"shell_cmd": "make -j4 NightlyTest",
+				},
+				{
+					"name": "NightlyUpdate",
+					"shell_cmd": "make -j4 NightlyUpdate",
+				},
+				{
+					"name": "travis_doc",
+					"shell_cmd": "make -j4 travis_doc",
+				},
+				{
+					"name": "Cacao",
+					"shell_cmd": "make -j4 Cacao",
+				},
+				{
+					"name": "GDML",
+					"shell_cmd": "make -j4 GDML",
+				},
+				{
+					"name": "pyedit",
+					"shell_cmd": "make -j4 pyedit",
+				},
+				{
+					"name": "pyedit_engine",
+					"shell_cmd": "make -j4 pyedit_engine",
+				},
+				{
+					"name": "ScriptController.o",
+					"shell_cmd": "make -j4 ScriptController.o",
+				},
+				{
+					"name": "ScriptController.i",
+					"shell_cmd": "make -j4 ScriptController.i",
+				},
+				{
+					"name": "ScriptController.s",
+					"shell_cmd": "make -j4 ScriptController.s",
+				},
+				{
+					"name": "ScriptLayer.o",
+					"shell_cmd": "make -j4 ScriptLayer.o",
+				},
+				{
+					"name": "ScriptLayer.i",
+					"shell_cmd": "make -j4 ScriptLayer.i",
+				},
+				{
+					"name": "ScriptLayer.s",
+					"shell_cmd": "make -j4 ScriptLayer.s",
+				},
+				{
+					"name": "main.o",
+					"shell_cmd": "make -j4 main.o",
+				},
+				{
+					"name": "main.i",
+					"shell_cmd": "make -j4 main.i",
+				},
+				{
+					"name": "main.s",
+					"shell_cmd": "make -j4 main.s",
+				},
+			],
+			"working_dir": "${project_path}/build",
+		},
+	],
+    "folders":
+    [
+        {
+            "path": ".",
+        },
+		{
+			"path": "/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dext/CocoStudio/Json/rapidjson"
+		},
+	],
+    "settings":
+    {
+        "cmake":
+        {
+            "build_folder": "${project_path}/build",
+        },
+    },
+}
