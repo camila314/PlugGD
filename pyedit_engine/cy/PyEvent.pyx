@@ -24,20 +24,26 @@ cdef class PyEventHandler:
 			"press_menu_button", "select_objects", "press_key"
 		]
 
+	def _runLoop(self):
+		v = popEvent()
+		if <long>v != 0:
+			print("ev", v.name)
+			for e in self.events:
+				if e.handler == v.name.decode():
+					print(e)
+					e.callback(self.extractEv(v))
+
 	def runLoop(self):
-		while True:
-			v = popEvent()
-			if <long>v != 0:
-				print("ev", v.name)
-				for e in self.events:
-					if e.handler == v.name.decode():
-						print(e)
-						e.callback(self.extractEv(v))
-			else:
-				exec("globals()")
+		clearEvents()
+		exec("""while True:\n    self._runLoop()""", {**globals(), "self":self}) # python is gross
 
 	def registerEvent(self, callback, handler, name):
-		self.events.append(PyEvent(handler, name, callback))
+		if handler in self.valid_events:
+			self.events.append(PyEvent(handler, name, callback))
+		else:
+			import pygd
+			pygd.alert("Error", "Invalid event handler {}".format(handler), "Ok")
+			raise ValueError("no")
 
 	def get_events(self):
 		return self.events

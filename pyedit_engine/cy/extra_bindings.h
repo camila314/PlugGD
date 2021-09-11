@@ -8,9 +8,11 @@ using namespace cocos2d;
 #include <string>
 #include <thread_control.h>
 #include <helper_hooks.h>
+#include <mutex>
 
 inline CCPoint mouse_coords(0,0);
 inline std::vector<event_base*> events;
+inline std::mutex event_lock;
 
 inline char const* demangle(const char* name) {
 
@@ -48,5 +50,30 @@ inline CCPoint getMouseCoords() {
 }
 
 inline event_base* popEvent() {
-	return threadSafePop();
+	event_lock.lock();
+	event_base* ret;
+	if (events.empty()) {
+		ret = nullptr;
+	} else {
+		//printf("event %d\n", events.size());
+		auto out = events.back();
+		//printf("yeah its an event\n");
+
+		events.pop_back();
+		ret = out;
+	}
+
+	event_lock.unlock();
+	
+	return ret;
+}
+
+inline void clearEvents() {
+	event_lock.lock();
+	events.clear();
+	event_lock.unlock();
+}
+
+inline std::vector<int> getObjGroups(GameObject* obj) {
+	return Cacao::collapseGroups(obj);
 }

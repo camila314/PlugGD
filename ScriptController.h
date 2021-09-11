@@ -12,8 +12,8 @@ struct Keybind {
 
 	static Keybind fromArray(std::vector<std::string> v);
 	static std::map<std::string, enumKeyCodes> customKeys;
-	operator std::string();
-	inline bool operator<(const Keybind& b) const {return key<b.key;}
+	operator std::string() const;
+	inline bool operator<(const Keybind& b) const {return reinterpret_cast<const uint64_t&>(*this)<reinterpret_cast<const uint64_t&>(b);}
 };
 
 class ScriptController : public cocos2d::CCNode {

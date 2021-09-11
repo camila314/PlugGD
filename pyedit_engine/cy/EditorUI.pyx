@@ -44,6 +44,10 @@ cdef public class Editor(PyCCObject) [object PyEditorUI, type PyEditUI]:
         self.edit_inst().deselectAll()
 
     @thread_sync
+    def deleteSelection(self):
+        self.edit_inst().onDeleteSelected(<CCObject*>self.edit_inst())
+
+    @thread_sync
     def duplicate(self):
         self.edit_inst().onDuplicate(<CCObject*>self.edit_inst())
         return self.selection

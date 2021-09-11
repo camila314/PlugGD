@@ -19,6 +19,34 @@ cdef public class PyGameObject(PyCCObject) [object PyGameOb, type PyGameObj]:
         self.gameob_inst().setPosition(p)
         return self
 
+    @property
+    def base_hue(self):
+        if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:
+            return self.gameob_inst().getRelativeSpriteColor(0).m_hue
+        else:
+            return 0.0
+
+    @base_hue.setter
+    def base_hue(self, v):
+        if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:
+            self.gameob_inst().getRelativeSpriteColor(0).m_hue = v
+        else:
+            pass
+
+    @property
+    def detail_hue(self):
+        if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:
+            return self.gameob_inst().getRelativeSpriteColor(2).m_hue
+        else:
+            return 0.0
+
+    @detail_hue.setter
+    def detail_hue(self, v):
+        if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:
+            self.gameob_inst().getRelativeSpriteColor(2).m_hue = v
+        else:
+            pass
+
     def incrementZ(self):
         (&self.gameob_inst()._zOrder())[0] = self.gameob_inst()._zOrder() + 1
 
@@ -50,6 +78,11 @@ cdef public class PyGameObject(PyCCObject) [object PyGameOb, type PyGameObj]:
     @property
     def levelStr(self):
         return self.gameob_inst().getSaveString()
+
+    @property
+    def groups(self):
+        return getObjGroups(self.gameob_inst())
+
     def rotate(self, deg):
         return self.rotateTo(self.rotation + deg)
     def rotateTo(self, deg):
@@ -58,3 +91,5 @@ cdef public class PyGameObject(PyCCObject) [object PyGameOb, type PyGameObj]:
     @property
     def rotation(self):
         return self.gameob_inst().getRotation()
+
+include "ObjectExtensions.pyx"

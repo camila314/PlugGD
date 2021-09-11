@@ -2,10 +2,10 @@
 #include <Python.h>
 #include <thread_control.h>
 #include <Cacao.hpp>
-#include <Cocoa/Cocoa.h>
 #include <vector>
 #include <helper_hooks.h>
-
+#include <mutex>
+#include <CoreGraphics/CoreGraphics.h>
 using namespace cocos2d;
 #include "cy/main.h"
 
@@ -16,7 +16,7 @@ static PyObject* PyGD_alert(PyObject *self, PyObject *args) {
     if(!PyArg_ParseTuple(args, "sss:alert", &title, &des, &button)) // get the arg
         return NULL;
 
-    dispatch_async(dispatch_get_main_queue(), ^{
+    ThreadController::sharedState()->scheduleC([=](){
         auto fl = FLAlertLayer::create(title, std::string(des), button);
         fl->show();
     });
@@ -43,47 +43,62 @@ namespace engine {
     static CFMachPortRef stopRef;
     static bool haltOn = false;
     static uint32_t timeSinceOn = 0;
-    std::vector<std::string> engineQueue;
-    static NSLock* threadSafety = nullptr;
-    static bool pyRunning;
+    std::vector<std::pair<std::string, std::string>> engineQueue;
+    static std::mutex threadSafety;
+    static volatile bool pyRunning;
 
-    void* engineThread(void*) {
-        if (!threadSafety) {
-            threadSafety = [[NSLock alloc] init];
-            PyImport_AppendInittab("pygd", &PyInit_PyGD);
-            PyImport_AppendInittab("EditorUI", &PyInit_main);
+    void engineThread() {
+        PyImport_AppendInittab("pygd", &PyInit_PyGD);
+        PyImport_AppendInittab("EditorUI", &PyInit_main);
 
-            Py_Initialize();
-            PyEval_InitThreads(); 
-        }
+        Py_Initialize();
+        PyEval_InitThreads(); 
 
-        pyThreadID = (uint64_t)pthread_self();
+        pyThreadID = std::this_thread::get_id();
+        PyRun_SimpleString("global_storage = {}");
+
         while (true) {
             if (engineQueue.size() > 0) {
 
-                [threadSafety lock];
+                threadSafety.lock();
                 pyRunning = true;
-                [threadSafety unlock];
+                threadSafety.unlock();
 
-                auto file = engineQueue.back().c_str();
-                engineQueue.pop_back();
+                auto file = engineQueue.back().first.c_str();
+                std::cout<<"look its "<<engineQueue.back().second<<"\n";
                 
                 FILE* fp = fopen(file, "r");
-                if (!fp)
+                if (!fp) {
+                    engineQueue.pop_back();
                     continue;
-                PyRun_SimpleString("locals().clear()\nfrom EditorUI import *\nimport sys;__import__(\"time\").sleep(0.1);sys.path.append('/Users/jakrillis/projects/3dmodel2gd')");
+                }
+                PyRun_SimpleString("(lambda x:[globals().clear(),globals().update({'global_storage': x})])(global_storage)\nfrom EditorUI import *\n");
+
+                PyObject* m = PyImport_AddModule("__main__");
+                if (!m) {
+                    printf("are you fucking serious rn\n");
+                    engineQueue.pop_back();
+                    PyErr_Print();
+                    threadSafety.lock();
+                    pyRunning = false;
+                    threadSafety.unlock();
+                    continue;
+                }
+
+                //PyObject_SetAttrString(m,"Keybind", PyUnicode_FromString(keybind));
+                PyModule_AddStringConstant(m, "Keybind", engineQueue.back().second.c_str());
+                engineQueue.pop_back();
 
                 PyRun_SimpleFile(fp, file);
                 printf("finished running file\n");
                 fclose(fp);
 
-                [threadSafety lock];
+                threadSafety.lock();
                 pyRunning = false;
-                [threadSafety unlock];
+                threadSafety.unlock();
 
             }
         } 
-        return NULL;
     }
 
     CGEventRef keyCallback(CGEventTapProxy proxy, 
@@ -116,32 +131,33 @@ namespace engine {
     }
 
     void killPy() {
-        pthread_kill((pthread_t)pyThreadID, SIGINT);
+        /*pthread_kill((pthread_t)pyThreadID, SIGINT);
         pthread_kill(ThreadController::sharedState()->threadID, SIGINT);
 
-        /*while (!pthread_kill( (pthread_t)pyThreadID, 0 )) {
-
-        }*/
-        pthread_t engine;
-        pthread_create(&engine, NULL, engineThread, NULL);
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            while (!pthread_kill( (pthread_t)pyThreadID, 0 )) {
+                __asm__ volatile ("nop");
+            }
+            pthread_t engine;
+            pthread_create(&engine, NULL, engineThread, NULL);
+        });*/
+        PyErr_SetInterrupt();
     }
 
     void init() {
         help();
-        auto pyQueue = dispatch_queue_create("python", DISPATCH_QUEUE_CONCURRENT);
-        auto keyboardQueue = dispatch_queue_create("halter_keyboard", DISPATCH_QUEUE_CONCURRENT);
-        auto haltQueue = dispatch_queue_create("halter_main", DISPATCH_QUEUE_CONCURRENT);
 
-        dispatch_async(dispatch_get_main_queue(), ^{
+        Cacao::scheduleFunction(+[](){
             auto mtc = ThreadController::sharedState();
             CCDirector::sharedDirector()
                         ->getScheduler()
                         ->scheduleUpdateForTarget(mtc,1,false);
         });
-        pthread_t engine;
-        pthread_create(&engine, NULL, engineThread, NULL);
+        //pthread_t engine;
+        //pthread_create(&engine, NULL, engineThread, NULL);
+        std::thread(engineThread).detach();
 
-        dispatch_async(keyboardQueue, ^{
+        std::thread([](){
             CFRunLoopRef runloop = (CFRunLoopRef)CFRunLoopGetCurrent();
 
             CGEventMask interestedEvents = CGEventMaskBit(kCGEventFlagsChanged);
@@ -159,12 +175,12 @@ namespace engine {
             CGEventTapEnable(eventTap, true);
             CFRunLoopRun();
             printf("what how\n");
-        });
+        }).detach();
 
-        dispatch_async(haltQueue, ^{
+        std::thread([](){
             for(;;) {
                 if (haltOn && time(NULL) - timeSinceOn >= 5) {
-                    [threadSafety lock];
+                    threadSafety.lock();
 
                     if (pyRunning) {
                         //auto gstate = PyGILState_Ensure();
@@ -177,18 +193,18 @@ namespace engine {
                         haltOn = false;
                     }
 
-                    [threadSafety unlock];
+                    threadSafety.unlock();
                 }
             }
-        });
+        }).detach();
     }
     bool isRunning() {
-        [threadSafety lock];
+        threadSafety.lock();
         bool out = pyRunning;
-        [threadSafety unlock];
+        threadSafety.unlock();
         return out;
     }
-    bool runFile(char const* progname) {
+    bool runFile(char const* progname, std::string keybind) {
         FILE* fp = fopen(progname, "r");
         if (!fp){
             printf("ur file failed %s\n", progname);
@@ -196,7 +212,7 @@ namespace engine {
         }
         fclose(fp);
 
-        engineQueue.push_back(std::string(progname));
+        engineQueue.push_back({std::string(progname), keybind});
         return true;
     }
 }

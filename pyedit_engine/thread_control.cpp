@@ -38,6 +38,10 @@ void ThreadController::update(float o) {
 
         things.pop_back();
     }
+    while (!c_callbacks.empty()) {
+        c_callbacks.back()();
+        c_callbacks.pop_back();
+    }
     PyGILState_Release(gstate);
 }
 ThreadController* ThreadController::create() {

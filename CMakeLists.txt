@@ -1,9 +1,7 @@
-set(SDK_LOCATION $ENV{CACAO_SDK_LOCATION}) # pls work pls work
-
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 project(pyedit VERSION 0.1.0 LANGUAGES CXX)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated -std=c++17 -DCC_TARGET_OS_MAC -mmacosx-version-min=10.7 -fms-extensions -Xlinker --no-demangle -isysroot ${SDK_LOCATION}")
-#set(CMAKE_OSX_SYSROOT ${SDK_LOCATION})
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated -std=c++17 -DCC_TARGET_OS_MAC -fms-extensions -Xlinker --no-demangle")
+
 
 include_directories(
 	/usr/local/lib/Cacao/

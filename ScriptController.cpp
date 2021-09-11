@@ -47,7 +47,7 @@ Keybind Keybind::fromArray(std::vector<std::string> v) {
 	return ret;
 }
 
-Keybind::operator std::string() {
+Keybind::operator std::string() const {
 	std::string out = "";
 
 	if (!exists) return out;

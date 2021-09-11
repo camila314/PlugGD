@@ -4,6 +4,8 @@
 #include "ScriptLayer.h"
 #include "ScriptController.h"
 
+static bool _usable = false;
+
 class swag: public $EditorUI<swag> {
  public:
 	void onPress(CCObject* sender) {
@@ -51,9 +53,12 @@ class swag: public $EditorUI<swag> {
 	    	}
 	    };
 	    getScheduler()->scheduleSelector(reinterpret_cast<Cacao::CC_SCHED&>(lam), this, 0.0, -1, 0.0, false);
+		_usable = true;
 	}
 
 	void keyDown(cocos2d::enumKeyCodes key) override {
+		if (!_usable)
+			return;
 		auto dispatcher = CCDirector::sharedDirector()->getKeyboardDispatcher();
 
 		Keybind justClick;
@@ -74,10 +79,12 @@ class swag: public $EditorUI<swag> {
 			if (k.key == key) {
 				printf("running %s\n", v.c_str());
 
-				this->getChildByTag(2653)->getChildByTag(8486)->setVisible(true);
-				this->getChildByTag(2653)->getChildByTag(8214)->setVisible(false);
-
-				engine::runFile((scripter()->plugFolder() + v).c_str());
+				if (this->getChildByTag(2653)) {
+					this->getChildByTag(2653)->getChildByTag(8486)->setVisible(true);
+					this->getChildByTag(2653)->getChildByTag(8214)->setVisible(false);
+				}
+				//std::cout<<std::string(k)<<"\n";
+				engine::runFile((scripter()->plugFolder() + v).c_str(), std::string(k));
 				return;
 			} 
 		}
@@ -85,12 +92,17 @@ class swag: public $EditorUI<swag> {
 	}
 } ya;
 
+class $redirect(GameManager) {
+ public:
+	void returnToLastScene(GJGameLevel* carry) {
+		$GameManager::returnToLastScene(carry);
+		engine::killPy();
+	}
+} ya2;
 
 $apply();
 
-void injec() __attribute__((constructor));
-
-void injec() {
+void inject() {
 	engine::init();
 	printf("injectd\n");
 	//Cacao::repeatFunction(+[](){scripter()->refreshFiles(false);}, -1, 5.0);

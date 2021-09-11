@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"gloal",
+				"global_storage"
+			],
+			[
+				"sched",
+				"scheduleC"
+			],
+			[
+				"ThreadController",
+				"ThreadController::sharedState()->threadID"
+			],
+			[
+				"empty",
+				"empty()) {"
+			],
+			[
+				"usable",
+				"_usable"
+			],
+			[
+				"gameob",
+				"gameob_inst())"
+			],
+			[
+				"getObjGroup",
+				"getObjGroups() {"
+			],
+			[
 				"scal",
 				"scaleTo"
 			],
@@ -344,12 +372,32 @@
 		"selected_items":
 		[
 			[
-				"c++",
-				"Set Syntax: C++"
+				"gpl",
+				"Licence Snippet: GNU GPL v2.0 [Header]"
+			],
+			[
+				"cython",
+				"Set Syntax: Cython"
 			],
 			[
 				"disable",
 				"Package Control: Disable Package"
+			],
+			[
+				"x86",
+				"Set Syntax: Assembly x86 (NASM)"
+			],
+			[
+				"profile",
+				"Plugin Development: Profile Events"
+			],
+			[
+				"enable packa",
+				"Package Control: Enable Package"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
 			],
 			[
 				"remove",
@@ -358,10 +406,6 @@
 			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"x86",
-				"Set Syntax: Assembly x86 (NASM)"
 			],
 			[
 				"65",
@@ -597,74 +641,113 @@
 	"expanded_folders":
 	[
 		"/Users/jakrillis/projects/pyedit",
-		"/Users/jakrillis/projects/pyedit/Cacao",
-		"/Users/jakrillis/projects/pyedit/Cacao/Auto",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy"
 	],
 	"file_history":
 	[
+		"/Users/jakrillis/projects/pyedit/LICENSE",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/EditorUI.pyx",
+		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/config.json",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/extra_bindings.h",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/engine.cpp",
+		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/Select All.py",
+		"/Users/jakrillis/projects/builds/fhook_b/Level-To-Layout by Camden314/main/slope1.txt",
+		"/Users/jakrillis/projects/builds/fhook_b/Level-To-Layout by Camden314/main/remove.py",
+		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/Shittify.py",
+		"/Users/jakrillis/projects/builds/fhook_b/Level-To-Layout by Camden314/main/halfblocks.txt",
+		"/Users/jakrillis/projects/builds/fhook_b/Level-To-Layout by Camden314/main/slope2.txt",
+		"/Users/jakrillis/projects/builds/fhook_b/Level-To-Layout by Camden314/main/block.txt",
+		"/Users/jakrillis/projects/builds/fhook_b/Level-To-Layout by Camden314/main/spikes1.txt",
+		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/Move 5.py",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/base.pxd",
+		"/Users/jakrillis/projects/pyedit/Cacao/Auto/cinnamon.mm",
+		"/Users/jakrillis/projects/builds/fhook_b/Level-To-Layout by Camden314/main/deco.txt",
+		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/Group Copy Paste.py",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/thread_control.cpp",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/engine.h",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/CMakeLists.txt",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/thread_control.h",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/GameObject.pyx",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/helper_hooks.h",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/helper_hooks.mm",
+		"/Users/jakrillis/projects/pyedit/Cacao/include/cocos2dx/sprite_nodes/CCSprite.h",
+		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/Circle Tool.py",
+		"/Users/jakrillis/projects/pyedit/Cacao/include/cc_defs.hpp",
+		"/Users/jakrillis/projects/pyedit/Cacao/include/cocos2dx/cocoa/CCDictionary.h",
+		"/Users/jakrillis/projects/pyedit/Cacao/include/cocos2dx/base_nodes/CCNode.h",
+		"/Users/jakrillis/projects/pyedit/CMakeLists.txt",
+		"/Users/jakrillis/projects/pyedit/rapidjson/CMakeLists.txt",
+		"/Users/jakrillis/t.cpp",
+		"/Users/jakrillis/t",
+		"/Users/jakrillis/projects/pyedit/main.cpp",
+		"/Users/jakrillis/projects/gdmods/gdstdlib/research.txt",
+		"/Users/jakrillis/t.py",
+		"/Users/jakrillis/Geometry Dash.asm",
+		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-09-04-204648_c314.crash",
+		"/Users/jakrillis/projects/pyedit/Cacao/cinnamon.mm",
+		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-09-04-221107_c314.crash",
+		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-09-04-230254_c314.crash",
+		"/Users/jakrillis/vta.py",
+		"/Users/jakrillis/annot.json",
+		"/Users/jakrillis/projects/pyedit/Cacao/include/CacKit",
+		"/Users/jakrillis/Geometry",
+		"/Users/jakrillis/Dash.asm",
+		"/Users/jakrillis/projects/pyedit/ScriptController.h",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/engine.mm",
+		"/Users/jakrillis/projects/pyedit/ScriptController.cpp",
+		"/Users/jakrillis/projects/pyedit/Cacao/include/CackitMacros.hpp",
+		"/Users/jakrillis/projects/pyedit/Cacao/Cacao.cpp",
+		"/Users/jakrillis/projects/pyedit/Cacao/symtab.asm",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/ObjectExtensions.pyx",
+		"/Users/jakrillis/projects/pyedit/Cacao/Auto/base/cackit.begin.hpp",
+		"/Users/jakrillis/projects/pyedit/Cacao/include/Cacao.hpp",
+		"/Users/jakrillis/projects/pyedit/Cacao/CMakeLists.txt",
+		"/Users/jakrillis/projects/pyedit/Cacao/Auto/buildcackit.py",
+		"/Users/jakrillis/projects/pyedit/Cacao/include/CacKit.hpp",
+		"/Users/jakrillis/projects/pyedit/Cacao/include/CacKit.cpp",
+		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-30-193153_c314.crash",
+		"/Users/jakrillis/t.asm",
+		"/Users/jakrillis/t.c",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/PyEvent.pyx",
+		"/Users/jakrillis/Library/Logs/DiagnosticReports/a.out_2021-08-31-140950_c314.crash",
+		"/Users/jakrillis/projects/builds/MacOSX-SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/tr1/random",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/UIHandler.pyx",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/main.pyx",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/main.cpp",
-		"/Users/jakrillis/projects/pyedit/main.cpp",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/helper_hooks.h",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/helper_hooks.mm",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/PyEvent.pyx",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/GameObject.pyx",
-		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/Select All.py",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-30-123628_c314.crash",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/CMakeLists.txt",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/base.pxd",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/engine.mm",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-30-130519_c314.crash",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-30-125236_c314.crash",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-30-121940_c314.crash",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-30-122523_c314.crash",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-30-005304_c314.crash",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/extra_bindings.h",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/engine.h",
-		"/Users/jakrillis/t.py",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-29-212900_c314.crash",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/EditorUI.pyx",
 		"/Users/jakrillis/projects/pyedit/ScriptLayer.h",
 		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/Select Left.py",
-		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/config.json",
 		"/Users/jakrillis/projects/pyedit/Cacao/include/cocos2dx/keyboard_dispatcher/CCKeyboardDelegate.h",
 		"/Users/jakrillis/projects/pyedit/Cacao/include/cocos2dx/custom/Delegates/CCKeyboardDelegate.h",
-		"/Users/jakrillis/projects/pyedit/ScriptController.cpp",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/thread_control.h",
 		"/Users/jakrillis/projects/pyedit/ScriptLayer.cpp",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/halt_control.h",
-		"/Users/jakrillis/projects/pyedit/Cacao/include/CacKit",
 		"/Users/jakrillis/spacingcontroller.cpp",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-29-123451_c314.crash",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/thread_control.cpp",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-27-234820_c314.crash",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-27-203753_c314.crash",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-25-133308_c314.crash",
-		"/Users/jakrillis/projects/pyedit/CMakeLists.txt",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/halt_control.hpp",
 		"/Users/jakrillis/projects/SPWN-language/test/bugtest.spwn",
 		"/Users/jakrillis/projects/SPWN-language/test/test.spwn",
 		"/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dx/keyboard_dispatcher/CCKeyboardDispatcher.h",
-		"/Users/jakrillis/projects/pyedit/Cacao/include/cc_defs.hpp",
 		"/Users/jakrillis/projects/pyedit/Cacao/cacnew.mm",
-		"/Users/jakrillis/projects/pyedit/Cacao/symtab.asm",
 		"/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dx/custom/Delegates/CCKeyboardDelegate.h",
-		"/Users/jakrillis/projects/pyedit/ScriptController.h",
 		"/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dx/CCDirector.h",
 		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/thing.py",
 		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/select_all.py",
 		"/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dx/keyboard_dispatcher/CCKeyboardDelegate.h",
-		"/Users/jakrillis/projects/pyedit/Cacao/Auto/buildcackit.py",
 		"/Users/jakrillis/projects/pyedit/rapidjson/include/rapidjson/encodings.h",
 		"/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dext/CocoStudio/Json/rapidjson/rapidjson.h",
-		"/Users/jakrillis/projects/pyedit/Cacao/include/Cacao.hpp",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-23-154037_c314.crash",
 		"/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dx/custom/Sprites/CCMenuItemSpriteExtra/CCMenuItemSpriteExtra.cpp",
 		"/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dx/menu_nodes/CCMenuItem.h",
-		"/Users/jakrillis/t.cpp",
 		"/Users/jakrillis/Library/Application",
 		"/usr/local/lib/Cacao/include/cocos2dext/CocoStudio/Json/rapidjson/document.h",
 		"/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dx/platform/mac/CCFileUtilsMac.mm",
@@ -674,7 +757,6 @@
 		"/var/folders/g2/6zj34k813451t2pgp1wpgmbc0000gn/T/t-65c0c6.cpp",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/clang_2021-08-22-213528-1_c314.crash",
 		"/Users/jakrillis/projects/graphicsgd2/ggd.py",
-		"/Users/jakrillis/projects/pyedit/rapidjson/CMakeLists.txt",
 		"/Users/jakrillis/projects/pyedit/rapidjson/include/rapidjson/allocators.h",
 		"/Users/jakrillis/projects/pyedit/rapidjson/include/rapidjson/document.h",
 		"/Users/jakrillis/projects/pyedit/rapidjson/include/rapidjson/prettywriter.h",
@@ -691,47 +773,7 @@
 		"/Users/jakrillis/projects/pyedit/rapidjson/test/unittest/valuetest.cpp",
 		"/Users/jakrillis/projects/pyedit/rapidjson/test/unittest/writertest.cpp",
 		"/Users/jakrillis/projects/pyedit/rapidjson/example/CMakeLists.txt",
-		"/Users/jakrillis/t.txt",
-		"/Users/jakrillis/projects/pyedit/cppfs/source/cppfs/include/cppfs/AbstractFileSystem.h",
-		"/Users/jakrillis/what.asm",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-20-220217_c314.crash",
-		"/Users/jakrillis/projects/phantom/SpacingGui/spacinggui.h",
-		"/Users/jakrillis/projects/phantom/SpacingGui/SpacingLayer.cpp",
-		"/Users/jakrillis/projects/phantom/SpacingGui/BezierEditor.cpp",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-20-012433_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-20-214132_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-20-101928_c314.crash",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/PyLvl.pyx",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-20-094546_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-20-094824_c314.crash",
-		"/Users/jakrillis/projects/cacao/to_copy/Cacao/include/cocos2dx/platform/mac/CCEventDispatcher.mm",
-		"/Users/jakrillis/projects/pyedit/Cacao/Cacao.cpp",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-20-212654-1_c314.crash",
-		"/Users/jakrillis/projects/phantom/spacingcontroller.cpp",
-		"/Users/jakrillis/projects/phantom/spacingcontroller.h",
-		"/Users/jakrillis/projects/pyedit/ScriptLayerh",
-		"/Users/jakrillis/gddec/finished_works/PlayerObject/updatejump.cpp",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-20-012541_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-165247_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-233449_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-233501_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-234250_c314.crash",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/GDArray.pyx",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-233253_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-221913_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-214418_c314.crash",
-		"/Users/jakrillis/projects/cacao/template/t.py",
-		"/Users/jakrillis/projects/cacao/template/main.cpp",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-163948_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-164502-1_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/osxinj_2021-08-19-164045_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-163402_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-160843_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-161244_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-160057_c314.crash",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-19-154944_c314.crash",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/main.h",
-		"/Users/jakrillis/projects/blockflow/cBind.h"
+		"/Users/jakrillis/t.txt"
 	],
 	"find":
 	{
@@ -747,9 +789,40 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"hsv",
+			"obj",
+			" ",
+			"GameObject",
+			"GameObjet",
+			"GJSpriteColor",
+			"getRelativeSprite",
+			"threadSafePop",
+			"threadSafe",
+			"pthread_kill",
+			"pyThreadID",
+			"[threadSafety unlock]",
+			"[threadSafety lock]",
+			"std::string",
+			"Ss",
+			"getMangles",
+			"CCNodeRGBA",
+			"hue",
+			"hsv",
+			"std::map<",
+			"~",
+			"__pyx_pw_4main_6Editor_9selection_7__get___lambda3",
+			"ButtonSprite",
+			"EditorUI",
+			"Editor",
+			"inject",
+			"_base",
+			"redirect",
+			"__pyx_m",
+			"__pyx_d",
+			"cum",
 			"_pyx_pw_4main_14PyEventHandler_3runLoop",
 			"PyList",
 			"namedtuple",
@@ -839,9 +912,16 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
+			"t",
+			",",
+			"",
+			",",
+			"threadSafety.unlock()",
+			"threadSafety.lock()",
+			"gd::string",
 			"#if FUCK",
 			"camila",
 			"ThreadController",
@@ -896,7 +976,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 340.0
+		"height": 334.0
 	},
 	"output.find_results":
 	{
@@ -915,6 +995,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"CCSPrite",
+				"pyedit/Cacao/include/cocos2dx/sprite_nodes/CCSprite.h"
+			],
+			[
+				"CCDictionary",
+				"pyedit/Cacao/include/cocos2dx/cocoa/CCDictionary.h"
+			],
+			[
+				"CCNode",
+				"pyedit/Cacao/include/cocos2dx/base_nodes/CCNode.h"
+			],
+			[
+				"SSPRite",
+				"pyedit/Cacao/include/cocos2dx/sprite_nodes/CCSprite.h"
+			],
 			[
 				"KEyboardDelegate",
 				"pyedit/Cacao/include/cocos2dx/keyboard_dispatcher/CCKeyboardDelegate.h"
@@ -1012,12 +1108,12 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{

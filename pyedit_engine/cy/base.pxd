@@ -1,5 +1,6 @@
 #cython: language_level=3
 from libcpp.string cimport string
+from libcpp.vector cimport vector
 from libcpp cimport bool
 
 cdef extern from "extra_bindings.h":
@@ -37,6 +38,8 @@ cdef extern from "extra_bindings.h":
     CCPoint getMouseCoords()
     char* getNode(CCObject*)
     event_base* popEvent()
+    void clearEvents()
+    vector[int] getObjGroups(GameObject*)
 
     cppclass LevelEditorLayer:
         GameObject* createObject(int, CCPoint, bool)
@@ -46,9 +49,15 @@ cdef extern from "extra_bindings.h":
         void selectObjects(CCArray*, bool)
         void pasteObjects(string)
         void onDuplicate(CCObject*)
+        void onDeleteSelected(CCObject*)
         CCArray* getSelectedObjects()
         void deselectAll()
         LevelEditorLayer* _editorLayer()
+
+    struct GJSpriteColor:
+        float m_hue
+        float m_sat
+        float m_bright
 
     cppclass GameObject(CCNode):
         int _id()
@@ -58,6 +67,7 @@ cdef extern from "extra_bindings.h":
         @staticmethod
         GameObject* createWithKey(int k)
         int& _zOrder()
+        GJSpriteColor* getRelativeSpriteColor(int k)
 
     cppclass ThreadController:
         @staticmethod

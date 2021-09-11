@@ -157,6 +157,10 @@
 					"shell_cmd": "make -j4 NightlyUpdate",
 				},
 				{
+					"name": "doc",
+					"shell_cmd": "make -j4 doc",
+				},
+				{
 					"name": "travis_doc",
 					"shell_cmd": "make -j4 travis_doc",
 				},
@@ -210,7 +214,7 @@
 				},
 				{
 					"name": "main.s",
-					"shell_cmd": "make -j4 main.s",
+					"shell_cmd": "make -j4 main.s"
 				},
 			],
 			"working_dir": "${project_path}/build",
@@ -222,7 +226,7 @@
             "path": ".",
         },
 		{
-			"path": "/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dext/CocoStudio/Json/rapidjson"
+			"path": "/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dext/CocoStudio/Json/rapidjson",
 		},
 	],
     "settings":
