@@ -1,13 +1,18 @@
 #include <engine.h>
 #include <Python.h>
 #include <thread_control.h>
-#include <Cacao.hpp>
 #include <vector>
 #include <helper_hooks.h>
 #include <mutex>
-#include <CoreGraphics/CoreGraphics.h>
 using namespace cocos2d;
 #include "cy/main.h"
+
+#if __APPLE__
+#include <Cacao.hpp>
+#include <CoreGraphics/CoreGraphics.h>
+#else
+#include <wind32.h>
+#endif
 
 static PyObject* PyGD_alert(PyObject *self, PyObject *args) {
     char* title;
@@ -17,7 +22,7 @@ static PyObject* PyGD_alert(PyObject *self, PyObject *args) {
         return NULL;
 
     ThreadController::sharedState()->scheduleC([=](){
-        auto fl = FLAlertLayer::create(title, std::string(des), button);
+        auto fl = FLAlertLayer::create(NULL, title, button, NULL, std::string(des));
         fl->show();
     });
     Py_RETURN_NONE;
@@ -40,7 +45,10 @@ PyInit_PyGD(void)
 }
 
 namespace engine {
+    #if __APPLE__
     static CFMachPortRef stopRef;
+    #endif
+
     static bool haltOn = false;
     static uint32_t timeSinceOn = 0;
     std::vector<std::pair<std::string, std::string>> engineQueue;
@@ -101,46 +109,7 @@ namespace engine {
         } 
     }
 
-    CGEventRef keyCallback(CGEventTapProxy proxy, 
-                                 CGEventType type, 
-                                 CGEventRef event, 
-                                 void* refcon) {
-
-        if (type == kCGEventTapDisabledByTimeout || type == kCGEventTapDisabledByUserInput) {
-            CGEventTapEnable(stopRef,true);
-            return event;
-        } else if(type == kCGEventFlagsChanged) {
-           // printf("flag change\n");
-            CGEventFlags flagsP = CGEventGetFlags(event);
-            bool shift = (flagsP & kCGEventFlagMaskShift) == kCGEventFlagMaskShift;
-            bool ctrl = (flagsP & kCGEventFlagMaskControl) == kCGEventFlagMaskControl || (flagsP & kCGEventFlagMaskCommand) == kCGEventFlagMaskCommand;
-
-            if (shift && ctrl) {
-                if (!haltOn) {
-                    printf("holy shit they be doin it\n");
-                    haltOn = true;
-                    timeSinceOn = time(NULL);
-                }
-            } else {
-                haltOn = false;
-            }
-       }
-
-       // send event to next application
-       return event;
-    }
-
     void killPy() {
-        /*pthread_kill((pthread_t)pyThreadID, SIGINT);
-        pthread_kill(ThreadController::sharedState()->threadID, SIGINT);
-
-        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            while (!pthread_kill( (pthread_t)pyThreadID, 0 )) {
-                __asm__ volatile ("nop");
-            }
-            pthread_t engine;
-            pthread_create(&engine, NULL, engineThread, NULL);
-        });*/
         PyErr_SetInterrupt();
     }
 
@@ -157,13 +126,41 @@ namespace engine {
         //pthread_create(&engine, NULL, engineThread, NULL);
         std::thread(engineThread).detach();
 
+        #if __APPLE__
         std::thread([](){
             CFRunLoopRef runloop = (CFRunLoopRef)CFRunLoopGetCurrent();
 
             CGEventMask interestedEvents = CGEventMaskBit(kCGEventFlagsChanged);
             CFMachPortRef eventTap = CGEventTapCreate(kCGSessionEventTap, kCGHeadInsertEventTap, 
                 kCGEventTapOptionListenOnly,
-                interestedEvents, keyCallback, NULL);
+                interestedEvents, +[] (CGEventTapProxy proxy, 
+                                 CGEventType type, 
+                                 CGEventRef event, 
+                                 void* refcon) {
+
+                if (type == kCGEventTapDisabledByTimeout || type == kCGEventTapDisabledByUserInput) {
+                    CGEventTapEnable(stopRef,true);
+                    return event;
+                } else if(type == kCGEventFlagsChanged) {
+                   // printf("flag change\n");
+                    CGEventFlags flagsP = CGEventGetFlags(event);
+                    bool shift = (flagsP & kCGEventFlagMaskShift) == kCGEventFlagMaskShift;
+                    bool ctrl = (flagsP & kCGEventFlagMaskControl) == kCGEventFlagMaskControl || (flagsP & kCGEventFlagMaskCommand) == kCGEventFlagMaskCommand;
+
+                    if (shift && ctrl) {
+                        if (!haltOn) {
+                            printf("holy shit they be doin it\n");
+                            haltOn = true;
+                            timeSinceOn = time(NULL);
+                        }
+                    } else {
+                        haltOn = false;
+                    }
+                }
+
+                // send event to next application
+                return event;
+            }, NULL);
             // by passing self as last argument, you can later send events to this class instance
             printf("its %p\n", eventTap);
             stopRef = eventTap;
@@ -176,6 +173,24 @@ namespace engine {
             CFRunLoopRun();
             printf("what how\n");
         }).detach();
+        #else
+        std::thread([](){
+            for (;;) {
+                bool shift = GetAsyncKeyState(VK_SHIFT) & 0x8000;
+                bool ctrl = GetAsyncKeyState(VK_CONTROL) & 0x8000;
+
+                if (shift && ctrl) {
+                    if (!haltOn) {
+                        printf("holy shit they be doin it\n");
+                        haltOn = true;
+                        timeSinceOn = time(NULL);
+                    }
+                } else {
+                    haltOn = false;
+                }
+            }
+        }).detach();
+        #endif
 
         std::thread([](){
             for(;;) {
@@ -189,7 +204,7 @@ namespace engine {
 
                         killPy();
 
-                        Cacao::scheduleFunction(+[](){FLAlertLayer::create("Emergency Stop", "Successfully terminated script", "Ok")->show();});
+                        Cacao::scheduleFunction(+[](){FLAlertLayer::create(NULL, "Emergency Stop", "Ok", NULL, "Successfully terminated script")->show();});
                         haltOn = false;
                     }
 

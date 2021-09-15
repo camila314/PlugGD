@@ -29,10 +29,6 @@
 					"shell_cmd": "make -j4 list_install_components",
 				},
 				{
-					"name": "package_source",
-					"shell_cmd": "make -j4 package_source",
-				},
-				{
 					"name": "rebuild_cache",
 					"shell_cmd": "make -j4 rebuild_cache",
 				},
@@ -157,10 +153,6 @@
 					"shell_cmd": "make -j4 NightlyUpdate",
 				},
 				{
-					"name": "doc",
-					"shell_cmd": "make -j4 doc",
-				},
-				{
 					"name": "travis_doc",
 					"shell_cmd": "make -j4 travis_doc",
 				},
@@ -181,40 +173,40 @@
 					"shell_cmd": "make -j4 pyedit_engine",
 				},
 				{
-					"name": "ScriptController.o",
-					"shell_cmd": "make -j4 ScriptController.o",
+					"name": "src/ScriptController.o",
+					"shell_cmd": "make -j4 src/ScriptController.o",
 				},
 				{
-					"name": "ScriptController.i",
-					"shell_cmd": "make -j4 ScriptController.i",
+					"name": "src/ScriptController.i",
+					"shell_cmd": "make -j4 src/ScriptController.i",
 				},
 				{
-					"name": "ScriptController.s",
-					"shell_cmd": "make -j4 ScriptController.s",
+					"name": "src/ScriptController.s",
+					"shell_cmd": "make -j4 src/ScriptController.s",
 				},
 				{
-					"name": "ScriptLayer.o",
-					"shell_cmd": "make -j4 ScriptLayer.o",
+					"name": "src/ScriptLayer.o",
+					"shell_cmd": "make -j4 src/ScriptLayer.o",
 				},
 				{
-					"name": "ScriptLayer.i",
-					"shell_cmd": "make -j4 ScriptLayer.i",
+					"name": "src/ScriptLayer.i",
+					"shell_cmd": "make -j4 src/ScriptLayer.i",
 				},
 				{
-					"name": "ScriptLayer.s",
-					"shell_cmd": "make -j4 ScriptLayer.s",
+					"name": "src/ScriptLayer.s",
+					"shell_cmd": "make -j4 src/ScriptLayer.s",
 				},
 				{
-					"name": "main.o",
-					"shell_cmd": "make -j4 main.o",
+					"name": "src/main.o",
+					"shell_cmd": "make -j4 src/main.o",
 				},
 				{
-					"name": "main.i",
-					"shell_cmd": "make -j4 main.i",
+					"name": "src/main.i",
+					"shell_cmd": "make -j4 src/main.i",
 				},
 				{
-					"name": "main.s",
-					"shell_cmd": "make -j4 main.s"
+					"name": "src/main.s",
+					"shell_cmd": "make -j4 src/main.s",
 				},
 			],
 			"working_dir": "${project_path}/build",

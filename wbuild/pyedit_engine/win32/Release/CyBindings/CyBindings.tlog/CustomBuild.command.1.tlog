@@ -1,0 +1,28 @@
+^Y:\PYEDIT\WBUILD\CMAKEFILES\462D1B0B8E98AE69DBEF93668F00FF45\MAIN.H.RULE
+setlocal
+C:\Users\jakrillis\AppData\Local\Programs\Python\Python38\Scripts\cython.exe --cplus Y:/pyedit/pyedit_engine/cy/main.pyx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^Y:\PYEDIT\WBUILD\CMAKEFILES\C64C6A2E5E1A03F49EC6647FEA4C8E58\CYBINDINGS.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^Y:\PYEDIT\PYEDIT_ENGINE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SY:/pyedit -BY:/pyedit/wbuild --check-stamp-file Y:/pyedit/wbuild/pyedit_engine/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

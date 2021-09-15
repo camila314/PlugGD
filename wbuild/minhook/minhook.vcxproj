@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|win32">
+      <Configuration>Debug</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|win32">
+      <Configuration>Release</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9CC16D91-7024-396F-AD5C-1A1229186EA7}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>win32</Platform>
+    <ProjectName>minhook</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Y:\pyedit\wbuild\minhook\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">minhook.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">minhook.x32d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Y:\pyedit\wbuild\minhook\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">minhook.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|win32'">minhook.x32</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Y:\pyedit\wbuild\minhook\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">minhook.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">minhook.x64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Y:\pyedit\wbuild\minhook\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">minhook.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">minhook.x32</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>Y:\pyedit\gd.h\cocos2dx;Y:\pyedit\gd.h\include;Y:\pyedit\gd.h;Y:\pyedit\cocos-headers;Y:\pyedit\cocos-headers\extensions;Y:\pyedit\cocos-headers\cocos2dx;Y:\pyedit\cocos-headers\cocos2dx\include;Y:\pyedit\cocos-headers\cocos2dx\kazmath\include;Y:\pyedit\cocos-headers\cocos2dx\platform\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32\OGLES;Y:\pyedit\minhook\include;Y:\pyedit\minhook\src;Y:\pyedit\minhook\src\hde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CC_TARGET_OS_WIN32;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CC_TARGET_OS_WIN32;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Y:\pyedit\gd.h\cocos2dx;Y:\pyedit\gd.h\include;Y:\pyedit\gd.h;Y:\pyedit\cocos-headers;Y:\pyedit\cocos-headers\extensions;Y:\pyedit\cocos-headers\cocos2dx;Y:\pyedit\cocos-headers\cocos2dx\include;Y:\pyedit\cocos-headers\cocos2dx\kazmath\include;Y:\pyedit\cocos-headers\cocos2dx\platform\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32\OGLES;Y:\pyedit\minhook\include;Y:\pyedit\minhook\src;Y:\pyedit\minhook\src\hde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>Y:\pyedit\gd.h\cocos2dx;Y:\pyedit\gd.h\include;Y:\pyedit\gd.h;Y:\pyedit\cocos-headers;Y:\pyedit\cocos-headers\extensions;Y:\pyedit\cocos-headers\cocos2dx;Y:\pyedit\cocos-headers\cocos2dx\include;Y:\pyedit\cocos-headers\cocos2dx\kazmath\include;Y:\pyedit\cocos-headers\cocos2dx\platform\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32\OGLES;Y:\pyedit\minhook\include;Y:\pyedit\minhook\src;Y:\pyedit\minhook\src\hde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>Y:\pyedit\gd.h\cocos2dx;Y:\pyedit\gd.h\include;Y:\pyedit\gd.h;Y:\pyedit\cocos-headers;Y:\pyedit\cocos-headers\extensions;Y:\pyedit\cocos-headers\cocos2dx;Y:\pyedit\cocos-headers\cocos2dx\include;Y:\pyedit\cocos-headers\cocos2dx\kazmath\include;Y:\pyedit\cocos-headers\cocos2dx\platform\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32\OGLES;Y:\pyedit\minhook\include;Y:\pyedit\minhook\src;Y:\pyedit\minhook\src\hde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CC_TARGET_OS_WIN32;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CC_TARGET_OS_WIN32;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Y:\pyedit\gd.h\cocos2dx;Y:\pyedit\gd.h\include;Y:\pyedit\gd.h;Y:\pyedit\cocos-headers;Y:\pyedit\cocos-headers\extensions;Y:\pyedit\cocos-headers\cocos2dx;Y:\pyedit\cocos-headers\cocos2dx\include;Y:\pyedit\cocos-headers\cocos2dx\kazmath\include;Y:\pyedit\cocos-headers\cocos2dx\platform\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32\OGLES;Y:\pyedit\minhook\include;Y:\pyedit\minhook\src;Y:\pyedit\minhook\src\hde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>Y:\pyedit\gd.h\cocos2dx;Y:\pyedit\gd.h\include;Y:\pyedit\gd.h;Y:\pyedit\cocos-headers;Y:\pyedit\cocos-headers\extensions;Y:\pyedit\cocos-headers\cocos2dx;Y:\pyedit\cocos-headers\cocos2dx\include;Y:\pyedit\cocos-headers\cocos2dx\kazmath\include;Y:\pyedit\cocos-headers\cocos2dx\platform\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32\OGLES;Y:\pyedit\minhook\include;Y:\pyedit\minhook\src;Y:\pyedit\minhook\src\hde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>Y:\pyedit\gd.h\cocos2dx;Y:\pyedit\gd.h\include;Y:\pyedit\gd.h;Y:\pyedit\cocos-headers;Y:\pyedit\cocos-headers\extensions;Y:\pyedit\cocos-headers\cocos2dx;Y:\pyedit\cocos-headers\cocos2dx\include;Y:\pyedit\cocos-headers\cocos2dx\kazmath\include;Y:\pyedit\cocos-headers\cocos2dx\platform\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32\OGLES;Y:\pyedit\minhook\include;Y:\pyedit\minhook\src;Y:\pyedit\minhook\src\hde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CC_TARGET_OS_WIN32;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CC_TARGET_OS_WIN32;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Y:\pyedit\gd.h\cocos2dx;Y:\pyedit\gd.h\include;Y:\pyedit\gd.h;Y:\pyedit\cocos-headers;Y:\pyedit\cocos-headers\extensions;Y:\pyedit\cocos-headers\cocos2dx;Y:\pyedit\cocos-headers\cocos2dx\include;Y:\pyedit\cocos-headers\cocos2dx\kazmath\include;Y:\pyedit\cocos-headers\cocos2dx\platform\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32\OGLES;Y:\pyedit\minhook\include;Y:\pyedit\minhook\src;Y:\pyedit\minhook\src\hde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>Y:\pyedit\gd.h\cocos2dx;Y:\pyedit\gd.h\include;Y:\pyedit\gd.h;Y:\pyedit\cocos-headers;Y:\pyedit\cocos-headers\extensions;Y:\pyedit\cocos-headers\cocos2dx;Y:\pyedit\cocos-headers\cocos2dx\include;Y:\pyedit\cocos-headers\cocos2dx\kazmath\include;Y:\pyedit\cocos-headers\cocos2dx\platform\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32\OGLES;Y:\pyedit\minhook\include;Y:\pyedit\minhook\src;Y:\pyedit\minhook\src\hde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>Y:\pyedit\gd.h\cocos2dx;Y:\pyedit\gd.h\include;Y:\pyedit\gd.h;Y:\pyedit\cocos-headers;Y:\pyedit\cocos-headers\extensions;Y:\pyedit\cocos-headers\cocos2dx;Y:\pyedit\cocos-headers\cocos2dx\include;Y:\pyedit\cocos-headers\cocos2dx\kazmath\include;Y:\pyedit\cocos-headers\cocos2dx\platform\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32\OGLES;Y:\pyedit\minhook\include;Y:\pyedit\minhook\src;Y:\pyedit\minhook\src\hde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CC_TARGET_OS_WIN32;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CC_TARGET_OS_WIN32;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Y:\pyedit\gd.h\cocos2dx;Y:\pyedit\gd.h\include;Y:\pyedit\gd.h;Y:\pyedit\cocos-headers;Y:\pyedit\cocos-headers\extensions;Y:\pyedit\cocos-headers\cocos2dx;Y:\pyedit\cocos-headers\cocos2dx\include;Y:\pyedit\cocos-headers\cocos2dx\kazmath\include;Y:\pyedit\cocos-headers\cocos2dx\platform\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32\OGLES;Y:\pyedit\minhook\include;Y:\pyedit\minhook\src;Y:\pyedit\minhook\src\hde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>Y:\pyedit\gd.h\cocos2dx;Y:\pyedit\gd.h\include;Y:\pyedit\gd.h;Y:\pyedit\cocos-headers;Y:\pyedit\cocos-headers\extensions;Y:\pyedit\cocos-headers\cocos2dx;Y:\pyedit\cocos-headers\cocos2dx\include;Y:\pyedit\cocos-headers\cocos2dx\kazmath\include;Y:\pyedit\cocos-headers\cocos2dx\platform\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32;Y:\pyedit\cocos-headers\cocos2dx\platform\third_party\win32\OGLES;Y:\pyedit\minhook\include;Y:\pyedit\minhook\src;Y:\pyedit\minhook\src\hde;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="Y:\pyedit\minhook\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule Y:/pyedit/minhook/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SY:/pyedit -BY:/pyedit/wbuild --check-stamp-file Y:/pyedit/wbuild/minhook/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Program Files\CMake\share\cmake-3.21\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\WriteBasicConfigVersionFile.cmake;Y:\pyedit\minhook\cmake\minhook-config.cmake.in;Y:\pyedit\wbuild\CMakeFiles\3.21.0-rc1\CMakeCCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Y:\pyedit\wbuild\minhook\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule Y:/pyedit/minhook/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SY:/pyedit -BY:/pyedit/wbuild --check-stamp-file Y:/pyedit/wbuild/minhook/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Program Files\CMake\share\cmake-3.21\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\WriteBasicConfigVersionFile.cmake;Y:\pyedit\minhook\cmake\minhook-config.cmake.in;Y:\pyedit\wbuild\CMakeFiles\3.21.0-rc1\CMakeCCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Y:\pyedit\wbuild\minhook\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule Y:/pyedit/minhook/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SY:/pyedit -BY:/pyedit/wbuild --check-stamp-file Y:/pyedit/wbuild/minhook/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Program Files\CMake\share\cmake-3.21\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\WriteBasicConfigVersionFile.cmake;Y:\pyedit\minhook\cmake\minhook-config.cmake.in;Y:\pyedit\wbuild\CMakeFiles\3.21.0-rc1\CMakeCCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Y:\pyedit\wbuild\minhook\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule Y:/pyedit/minhook/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SY:/pyedit -BY:/pyedit/wbuild --check-stamp-file Y:/pyedit/wbuild/minhook/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Program Files\CMake\share\cmake-3.21\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\WriteBasicConfigVersionFile.cmake;Y:\pyedit\minhook\cmake\minhook-config.cmake.in;Y:\pyedit\wbuild\CMakeFiles\3.21.0-rc1\CMakeCCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Y:\pyedit\wbuild\minhook\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Y:\pyedit\minhook\src\buffer.c" />
+    <ClCompile Include="Y:\pyedit\minhook\src\hook.c" />
+    <ClCompile Include="Y:\pyedit\minhook\src\trampoline.c" />
+    <ClCompile Include="Y:\pyedit\minhook\src\hde\hde32.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Y:\pyedit\wbuild\ZERO_CHECK.vcxproj">
+      <Project>{F122F9F3-0233-3495-B66E-06D7C9CF1AE6}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

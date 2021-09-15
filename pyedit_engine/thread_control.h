@@ -1,7 +1,13 @@
 #include <Python.h>
-#include <cc_defs.hpp>
-#include <pthread.h>
 #include <functional>
+
+#if __APPLE__
+#include <cc_defs.hpp>
+#else
+#include <wind32.h>
+#endif
+
+#include <thread>
 
 class ThreadController : public cocos2d::CCNode {
  public:
@@ -11,10 +17,10 @@ class ThreadController : public cocos2d::CCNode {
     virtual void update(float o);
     static ThreadController* create();
     static ThreadController* shared;
-    inline bool onMain() {return threadID==pthread_self();}
+    inline bool onMain() {return threadID==std::this_thread::get_id();}
 
     PyGILState_STATE gstate;
     std::vector<PyObject*> things;
     std::vector<std::function<void(void)>> c_callbacks;
-    pthread_t threadID;
+    std::thread::id threadID;
 };

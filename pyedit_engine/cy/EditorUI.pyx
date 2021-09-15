@@ -26,7 +26,7 @@ cdef public class Editor(PyCCObject) [object PyEditorUI, type PyEditUI]:
         p.x = float(x)
         p.y = float(y)+90.0
 
-        cdef GameObject* o = self.edit_inst()._editorLayer().createObject(objectid, p, True)
+        cdef GameObject* o = getEditorLayer(self.edit_inst()).createObject(objectid, p, True)
         pyo = PyGameObject().fromPtr(<CCObject*>o)
         return pyo
 
@@ -37,7 +37,7 @@ cdef public class Editor(PyCCObject) [object PyEditorUI, type PyEditUI]:
 
     @property
     def objects(self):
-        c = thread_sync(lambda:GameObjArray().fromPtr(self.edit_inst()._editorLayer()._objects()))()
+        c = thread_sync(lambda:GameObjArray().fromPtr(getEditorLayer(self.edit_inst()).getAllObjects()))()
         return c
 
     def deselect(self):

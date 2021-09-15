@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="Y:\pyedit\wbuild\CMakeFiles\b7af89893172028a9a26672f987bf2ac\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{4A1F9279-07A0-3280-AED2-8077ACC5BD6C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

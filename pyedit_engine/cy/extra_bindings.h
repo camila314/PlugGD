@@ -1,32 +1,69 @@
 // bad practice my ass
+#if __APPLE__
 #include <Cacao.hpp>
 using namespace cocos2d;
+#else
+#include <wind32.h>
+#endif
 
 #include <cstdlib>
 #include <memory>
-#include <cxxabi.h>
 #include <string>
 #include <thread_control.h>
 #include <helper_hooks.h>
 #include <mutex>
 
-inline CCPoint mouse_coords(0,0);
+#if __APPLE__
+#include <cxxabi.h>
+#endif
+
 inline std::vector<event_base*> events;
 inline std::mutex event_lock;
 
-inline char const* demangle(const char* name) {
 
+inline int& gob_getZOrder(GameObject* gob) {
+	#if __APPLE__
+	return gob->_zOrder();
+	#else
+	return gob->m_nGameZOrder;
+	#endif
+}
+inline int gob_getID(GameObject* gob) { 
+	#if __APPLE__
+	return gob->_id();
+	#else
+	return gob->m_nObjectID;
+	#endif
+}
+
+inline LevelEditorLayer* getEditorLayer(EditorUI* eui) {
+	#if __APPLE__
+	return eui->_editorLayer();
+	#else
+	return eui->m_pEditorLayer;
+	#endif
+}
+
+inline char const* demangle(const char* name) {
+	#if __APPLE__
     int status = -4; // some arbitrary value to eliminate the compiler warning
 
     // enable c++11 by passing the flag -std=c++11 to g++
     auto res = abi::__cxa_demangle(name, NULL, NULL, &status);
 
     return (status==0) ? res : name ;
+    #else
+    return name;
+    #endif
 }
 
 inline EditorUI* EditorUI_shared() {
 	if (LEL) {
+		#if __APPLE__
 		return LEL->_editorUI();
+		#else
+		return LEL->getEditorUI();
+		#endif
 	} else {
 		return 0;
 	}
@@ -43,10 +80,6 @@ inline char* getNode(CCObject* node) {
 
 inline bool onMainThread() {
 	return ThreadController::sharedState()->onMain();
-}
-
-inline CCPoint getMouseCoords() {
-	return mouse_coords;
 }
 
 inline event_base* popEvent() {

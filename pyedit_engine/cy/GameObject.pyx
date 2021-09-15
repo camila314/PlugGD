@@ -22,33 +22,33 @@ cdef public class PyGameObject(PyCCObject) [object PyGameOb, type PyGameObj]:
     @property
     def base_hue(self):
         if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:
-            return self.gameob_inst().getRelativeSpriteColor(0).m_hue
+            return self.gameob_inst().getRelativeSpriteColor(0).hue
         else:
             return 0.0
 
     @base_hue.setter
     def base_hue(self, v):
         if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:
-            self.gameob_inst().getRelativeSpriteColor(0).m_hue = v
+            self.gameob_inst().getRelativeSpriteColor(0).hue = v
         else:
             pass
 
     @property
     def detail_hue(self):
         if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:
-            return self.gameob_inst().getRelativeSpriteColor(2).m_hue
+            return self.gameob_inst().getRelativeSpriteColor(2).hue
         else:
             return 0.0
 
     @detail_hue.setter
     def detail_hue(self, v):
         if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:
-            self.gameob_inst().getRelativeSpriteColor(2).m_hue = v
+            self.gameob_inst().getRelativeSpriteColor(2).hue = v
         else:
             pass
 
     def incrementZ(self):
-        (&self.gameob_inst()._zOrder())[0] = self.gameob_inst()._zOrder() + 1
+        (&gob_getZOrder(self.gameob_inst()))[0] = gob_getZOrder(self.gameob_inst()) + 1
 
     @property
     def size(self):
@@ -61,7 +61,7 @@ cdef public class PyGameObject(PyCCObject) [object PyGameOb, type PyGameObj]:
 
     @property
     def id(self):
-        return self.gameob_inst()._id()
+        return gob_getID(self.gameob_inst())
 
     @property
     def position(self):

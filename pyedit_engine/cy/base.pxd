@@ -43,7 +43,7 @@ cdef extern from "extra_bindings.h":
 
     cppclass LevelEditorLayer:
         GameObject* createObject(int, CCPoint, bool)
-        CCArray* _objects()
+        CCArray* getAllObjects()
 
     cppclass EditorUI:
         void selectObjects(CCArray*, bool)
@@ -52,22 +52,24 @@ cdef extern from "extra_bindings.h":
         void onDeleteSelected(CCObject*)
         CCArray* getSelectedObjects()
         void deselectAll()
-        LevelEditorLayer* _editorLayer()
+
+    LevelEditorLayer* getEditorLayer(EditorUI* eui)
 
     struct GJSpriteColor:
-        float m_hue
-        float m_sat
-        float m_bright
+        float hue
+        float sat
+        float bright
 
     cppclass GameObject(CCNode):
-        int _id()
         void destroyObject()
         string getSaveString()
         void updateCustomScale(float)
         @staticmethod
         GameObject* createWithKey(int k)
-        int& _zOrder()
         GJSpriteColor* getRelativeSpriteColor(int k)
+
+    int& gob_getZOrder(GameObject*)
+    int gob_getID(GameObject*)
 
     cppclass ThreadController:
         @staticmethod
