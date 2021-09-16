@@ -32,6 +32,7 @@
 
 # Ignore build folder
 **/build
+**/wbuild
 
 # Macos be like
 **/.DS_Store

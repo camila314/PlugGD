@@ -163,34 +163,44 @@ void(*swag_2::$returnToLastScene)(swag_2*, GJGameLevel* c) = nullptr;
 
 #if __APPLE__
 $apply();
+
+#else
+void __fastcall idfk(void* dontcare, void* dontcare2) {
+    scripter()->refreshFiles(false);
+}
 #endif
 
 void inject() {
     #if _WIN32
         MH_Initialize();
 
-        auto base = GetModuleHandle(0);
+        uintptr_t base = reinterpret_cast<uintptr_t>(GetModuleHandleA(0));
 
         auto tmp1 = &swag_2::returnToLastScene;
-        MH_CreateHook(base+0xce6a0, reinterpret_cast<void*&>(tmp1), reinterpret_cast<void**>(&swag_2::$returnToLastScene));
+        MH_CreateHook(reinterpret_cast<LPVOID>(base+0xce6a0), reinterpret_cast<void*&>(tmp1), reinterpret_cast<void**>(&swag_2::$returnToLastScene));
         auto tmp2 = &swag::keyDown;
-        MH_CreateHook(base+0x91a30, reinterpret_cast<void*&>(tmp2), reinterpret_cast<void**>(&swag::$keyDown));
+        MH_CreateHook(reinterpret_cast<LPVOID>(base+0x91a30), reinterpret_cast<void*&>(tmp2), reinterpret_cast<void**>(&swag::$keyDown));
         auto tmp3 = &swag::setupCreateMenu;
-        MH_CreateHook(base+0x91a30, reinterpret_cast<void*&>(tmp3), reinterpret_cast<void**>(&swag::$setupCreateMenu));
+        MH_CreateHook(reinterpret_cast<LPVOID>(base+0x7caf0), reinterpret_cast<void*&>(tmp3), reinterpret_cast<void**>(&swag::$setupCreateMenu));
     #endif
 
-    engine::init();
+    //engine::init();
     printf("injectd\n");
-    //Cacao::repeatFunction(+[](){scripter()->refreshFiles(false);}, -1, 5.0);
-    Cacao::scheduleFunction(+[](){scripter()->refreshFiles(false);});
+    //Cacao::scheduleFunction(+[](){scripter()->refreshFiles(false);});
 
     #if _WIN32
+    printf("hookd, create menu is %p, base is %p\n", base+0x7caf0, base);
     MH_EnableHook(MH_ALL_HOOKS);
+    Cacao::scheduleFunction(idfk);
     #endif
 }
 
 #if _WIN32
 DWORD WINAPI thread_func(void* hModule) {
+    AllocConsole();
+    SetConsoleTitleA("PoweredByPy debug");
+    freopen_s(reinterpret_cast<FILE**>(stdout), "CONOUT$", "w", stdout);
+
     inject();
     return true;
 }

@@ -26,9 +26,8 @@ CCACHE_FOUND:FILEPATH=CCACHE_FOUND-NOTFOUND
 //Path to a program.
 CMAKE_AR:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/VC/Tools/MSVC/14.28.29333/bin/Hostx64/x86/lib.exe
 
-//Choose the type of build, options are: Debug Release RelWithDebInfo
-// MinSizeRel.
-CMAKE_BUILD_TYPE:STRING=RelWithDebInfo
+//No help, variable specified on the command line.
+CMAKE_BUILD_TYPE:UNINITIALIZED=RelWithDebInfo
 
 //Semicolon separated list of supported configuration types, only
 // supports Debug, Release, MinSizeRel, and RelWithDebInfo, anything

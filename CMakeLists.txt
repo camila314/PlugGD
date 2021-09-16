@@ -49,6 +49,7 @@ endif()
 
 
 if(WIN32)
+	message(WARNING "void p is " ${CMAKE_SIZEOF_VOID_P})
 	set(CMAKE_SIZEOF_VOID_P 4)
 	set(CMAKE_SYSTEM_PROCESSOR "i686")
 	set(CMAKE_GENERATOR_PLATFORM x86)
