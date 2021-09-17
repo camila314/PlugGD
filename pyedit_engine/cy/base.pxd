@@ -66,7 +66,8 @@ cdef extern from "extra_bindings.h":
         void updateCustomScale(float)
         @staticmethod
         GameObject* createWithKey(int k)
-        GJSpriteColor* getRelativeSpriteColor(int k)
+    
+    GJSpriteColor* getRelSpriteColor(GameObject* g, int k)
 
     int& gob_getZOrder(GameObject*)
     int gob_getID(GameObject*)

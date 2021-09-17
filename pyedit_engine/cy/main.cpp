@@ -8232,8 +8232,8 @@ static PyObject *__pyx_pf_4main_12PyGameObject_2move(struct PyGameOb *__pyx_v_se
  * 
  *     @property
  *     def base_hue(self):             # <<<<<<<<<<<<<<
- *         if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:
- *             return self.gameob_inst().getRelativeSpriteColor(0).hue
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 0) != 0:
+ *             return getRelSpriteColor(self.gameob_inst(), 0).hue
  */
 
 /* Python wrapper */
@@ -8262,22 +8262,22 @@ static PyObject *__pyx_pf_4main_12PyGameObject_8base_hue___get__(struct PyGameOb
   /* "../../pyedit_engine/cy/GameObject.pyx":24
  *     @property
  *     def base_hue(self):
- *         if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:             # <<<<<<<<<<<<<<
- *             return self.gameob_inst().getRelativeSpriteColor(0).hue
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 0) != 0:             # <<<<<<<<<<<<<<
+ *             return getRelSpriteColor(self.gameob_inst(), 0).hue
  *         else:
  */
-  __pyx_t_1 = ((((long)((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self)->getRelativeSpriteColor(0)) != 0) != 0);
+  __pyx_t_1 = ((((long)getRelSpriteColor(((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self), 0)) != 0) != 0);
   if (__pyx_t_1) {
 
     /* "../../pyedit_engine/cy/GameObject.pyx":25
  *     def base_hue(self):
- *         if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:
- *             return self.gameob_inst().getRelativeSpriteColor(0).hue             # <<<<<<<<<<<<<<
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 0) != 0:
+ *             return getRelSpriteColor(self.gameob_inst(), 0).hue             # <<<<<<<<<<<<<<
  *         else:
  *             return 0.0
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = PyFloat_FromDouble(((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self)->getRelativeSpriteColor(0)->hue); if (unlikely(!__pyx_t_2)) __PYX_ERR(5, 25, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(getRelSpriteColor(((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self), 0)->hue); if (unlikely(!__pyx_t_2)) __PYX_ERR(5, 25, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_r = __pyx_t_2;
     __pyx_t_2 = 0;
@@ -8286,14 +8286,14 @@ static PyObject *__pyx_pf_4main_12PyGameObject_8base_hue___get__(struct PyGameOb
     /* "../../pyedit_engine/cy/GameObject.pyx":24
  *     @property
  *     def base_hue(self):
- *         if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:             # <<<<<<<<<<<<<<
- *             return self.gameob_inst().getRelativeSpriteColor(0).hue
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 0) != 0:             # <<<<<<<<<<<<<<
+ *             return getRelSpriteColor(self.gameob_inst(), 0).hue
  *         else:
  */
   }
 
   /* "../../pyedit_engine/cy/GameObject.pyx":27
- *             return self.gameob_inst().getRelativeSpriteColor(0).hue
+ *             return getRelSpriteColor(self.gameob_inst(), 0).hue
  *         else:
  *             return 0.0             # <<<<<<<<<<<<<<
  * 
@@ -8310,8 +8310,8 @@ static PyObject *__pyx_pf_4main_12PyGameObject_8base_hue___get__(struct PyGameOb
  * 
  *     @property
  *     def base_hue(self):             # <<<<<<<<<<<<<<
- *         if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:
- *             return self.gameob_inst().getRelativeSpriteColor(0).hue
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 0) != 0:
+ *             return getRelSpriteColor(self.gameob_inst(), 0).hue
  */
 
   /* function exit code */
@@ -8329,8 +8329,8 @@ static PyObject *__pyx_pf_4main_12PyGameObject_8base_hue___get__(struct PyGameOb
  * 
  *     @base_hue.setter
  *     def base_hue(self, v):             # <<<<<<<<<<<<<<
- *         if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:
- *             self.gameob_inst().getRelativeSpriteColor(0).hue = v
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 0) != 0:
+ *             getRelSpriteColor(self.gameob_inst(), 0).hue = v
  */
 
 /* Python wrapper */
@@ -8359,35 +8359,35 @@ static int __pyx_pf_4main_12PyGameObject_8base_hue_2__set__(struct PyGameOb *__p
   /* "../../pyedit_engine/cy/GameObject.pyx":31
  *     @base_hue.setter
  *     def base_hue(self, v):
- *         if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:             # <<<<<<<<<<<<<<
- *             self.gameob_inst().getRelativeSpriteColor(0).hue = v
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 0) != 0:             # <<<<<<<<<<<<<<
+ *             getRelSpriteColor(self.gameob_inst(), 0).hue = v
  *         else:
  */
-  __pyx_t_1 = ((((long)((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self)->getRelativeSpriteColor(0)) != 0) != 0);
+  __pyx_t_1 = ((((long)getRelSpriteColor(((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self), 0)) != 0) != 0);
   if (__pyx_t_1) {
 
     /* "../../pyedit_engine/cy/GameObject.pyx":32
  *     def base_hue(self, v):
- *         if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:
- *             self.gameob_inst().getRelativeSpriteColor(0).hue = v             # <<<<<<<<<<<<<<
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 0) != 0:
+ *             getRelSpriteColor(self.gameob_inst(), 0).hue = v             # <<<<<<<<<<<<<<
  *         else:
  *             pass
  */
     __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_v_v); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(5, 32, __pyx_L1_error)
-    ((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self)->getRelativeSpriteColor(0)->hue = __pyx_t_2;
+    getRelSpriteColor(((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self), 0)->hue = __pyx_t_2;
 
     /* "../../pyedit_engine/cy/GameObject.pyx":31
  *     @base_hue.setter
  *     def base_hue(self, v):
- *         if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:             # <<<<<<<<<<<<<<
- *             self.gameob_inst().getRelativeSpriteColor(0).hue = v
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 0) != 0:             # <<<<<<<<<<<<<<
+ *             getRelSpriteColor(self.gameob_inst(), 0).hue = v
  *         else:
  */
     goto __pyx_L3;
   }
 
   /* "../../pyedit_engine/cy/GameObject.pyx":34
- *             self.gameob_inst().getRelativeSpriteColor(0).hue = v
+ *             getRelSpriteColor(self.gameob_inst(), 0).hue = v
  *         else:
  *             pass             # <<<<<<<<<<<<<<
  * 
@@ -8401,8 +8401,8 @@ static int __pyx_pf_4main_12PyGameObject_8base_hue_2__set__(struct PyGameOb *__p
  * 
  *     @base_hue.setter
  *     def base_hue(self, v):             # <<<<<<<<<<<<<<
- *         if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:
- *             self.gameob_inst().getRelativeSpriteColor(0).hue = v
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 0) != 0:
+ *             getRelSpriteColor(self.gameob_inst(), 0).hue = v
  */
 
   /* function exit code */
@@ -8420,8 +8420,8 @@ static int __pyx_pf_4main_12PyGameObject_8base_hue_2__set__(struct PyGameOb *__p
  * 
  *     @property
  *     def detail_hue(self):             # <<<<<<<<<<<<<<
- *         if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:
- *             return self.gameob_inst().getRelativeSpriteColor(2).hue
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 2) != 0:
+ *             return getRelSpriteColor(self.gameob_inst(), 2).hue
  */
 
 /* Python wrapper */
@@ -8450,22 +8450,22 @@ static PyObject *__pyx_pf_4main_12PyGameObject_10detail_hue___get__(struct PyGam
   /* "../../pyedit_engine/cy/GameObject.pyx":38
  *     @property
  *     def detail_hue(self):
- *         if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:             # <<<<<<<<<<<<<<
- *             return self.gameob_inst().getRelativeSpriteColor(2).hue
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 2) != 0:             # <<<<<<<<<<<<<<
+ *             return getRelSpriteColor(self.gameob_inst(), 2).hue
  *         else:
  */
-  __pyx_t_1 = ((((long)((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self)->getRelativeSpriteColor(2)) != 0) != 0);
+  __pyx_t_1 = ((((long)getRelSpriteColor(((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self), 2)) != 0) != 0);
   if (__pyx_t_1) {
 
     /* "../../pyedit_engine/cy/GameObject.pyx":39
  *     def detail_hue(self):
- *         if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:
- *             return self.gameob_inst().getRelativeSpriteColor(2).hue             # <<<<<<<<<<<<<<
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 2) != 0:
+ *             return getRelSpriteColor(self.gameob_inst(), 2).hue             # <<<<<<<<<<<<<<
  *         else:
  *             return 0.0
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = PyFloat_FromDouble(((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self)->getRelativeSpriteColor(2)->hue); if (unlikely(!__pyx_t_2)) __PYX_ERR(5, 39, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(getRelSpriteColor(((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self), 2)->hue); if (unlikely(!__pyx_t_2)) __PYX_ERR(5, 39, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_r = __pyx_t_2;
     __pyx_t_2 = 0;
@@ -8474,14 +8474,14 @@ static PyObject *__pyx_pf_4main_12PyGameObject_10detail_hue___get__(struct PyGam
     /* "../../pyedit_engine/cy/GameObject.pyx":38
  *     @property
  *     def detail_hue(self):
- *         if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:             # <<<<<<<<<<<<<<
- *             return self.gameob_inst().getRelativeSpriteColor(2).hue
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 2) != 0:             # <<<<<<<<<<<<<<
+ *             return getRelSpriteColor(self.gameob_inst(), 2).hue
  *         else:
  */
   }
 
   /* "../../pyedit_engine/cy/GameObject.pyx":41
- *             return self.gameob_inst().getRelativeSpriteColor(2).hue
+ *             return getRelSpriteColor(self.gameob_inst(), 2).hue
  *         else:
  *             return 0.0             # <<<<<<<<<<<<<<
  * 
@@ -8498,8 +8498,8 @@ static PyObject *__pyx_pf_4main_12PyGameObject_10detail_hue___get__(struct PyGam
  * 
  *     @property
  *     def detail_hue(self):             # <<<<<<<<<<<<<<
- *         if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:
- *             return self.gameob_inst().getRelativeSpriteColor(2).hue
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 2) != 0:
+ *             return getRelSpriteColor(self.gameob_inst(), 2).hue
  */
 
   /* function exit code */
@@ -8517,8 +8517,8 @@ static PyObject *__pyx_pf_4main_12PyGameObject_10detail_hue___get__(struct PyGam
  * 
  *     @detail_hue.setter
  *     def detail_hue(self, v):             # <<<<<<<<<<<<<<
- *         if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:
- *             self.gameob_inst().getRelativeSpriteColor(2).hue = v
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 2) != 0:
+ *             getRelSpriteColor(self.gameob_inst(), 2).hue = v
  */
 
 /* Python wrapper */
@@ -8547,35 +8547,35 @@ static int __pyx_pf_4main_12PyGameObject_10detail_hue_2__set__(struct PyGameOb *
   /* "../../pyedit_engine/cy/GameObject.pyx":45
  *     @detail_hue.setter
  *     def detail_hue(self, v):
- *         if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:             # <<<<<<<<<<<<<<
- *             self.gameob_inst().getRelativeSpriteColor(2).hue = v
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 2) != 0:             # <<<<<<<<<<<<<<
+ *             getRelSpriteColor(self.gameob_inst(), 2).hue = v
  *         else:
  */
-  __pyx_t_1 = ((((long)((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self)->getRelativeSpriteColor(2)) != 0) != 0);
+  __pyx_t_1 = ((((long)getRelSpriteColor(((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self), 2)) != 0) != 0);
   if (__pyx_t_1) {
 
     /* "../../pyedit_engine/cy/GameObject.pyx":46
  *     def detail_hue(self, v):
- *         if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:
- *             self.gameob_inst().getRelativeSpriteColor(2).hue = v             # <<<<<<<<<<<<<<
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 2) != 0:
+ *             getRelSpriteColor(self.gameob_inst(), 2).hue = v             # <<<<<<<<<<<<<<
  *         else:
  *             pass
  */
     __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_v_v); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) __PYX_ERR(5, 46, __pyx_L1_error)
-    ((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self)->getRelativeSpriteColor(2)->hue = __pyx_t_2;
+    getRelSpriteColor(((struct __pyx_vtabstruct_4main_PyGameObject *)__pyx_v_self->__pyx_base.__pyx_vtab)->gameob_inst(__pyx_v_self), 2)->hue = __pyx_t_2;
 
     /* "../../pyedit_engine/cy/GameObject.pyx":45
  *     @detail_hue.setter
  *     def detail_hue(self, v):
- *         if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:             # <<<<<<<<<<<<<<
- *             self.gameob_inst().getRelativeSpriteColor(2).hue = v
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 2) != 0:             # <<<<<<<<<<<<<<
+ *             getRelSpriteColor(self.gameob_inst(), 2).hue = v
  *         else:
  */
     goto __pyx_L3;
   }
 
   /* "../../pyedit_engine/cy/GameObject.pyx":48
- *             self.gameob_inst().getRelativeSpriteColor(2).hue = v
+ *             getRelSpriteColor(self.gameob_inst(), 2).hue = v
  *         else:
  *             pass             # <<<<<<<<<<<<<<
  * 
@@ -8589,8 +8589,8 @@ static int __pyx_pf_4main_12PyGameObject_10detail_hue_2__set__(struct PyGameOb *
  * 
  *     @detail_hue.setter
  *     def detail_hue(self, v):             # <<<<<<<<<<<<<<
- *         if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:
- *             self.gameob_inst().getRelativeSpriteColor(2).hue = v
+ *         if <long>getRelSpriteColor(self.gameob_inst(), 2) != 0:
+ *             getRelSpriteColor(self.gameob_inst(), 2).hue = v
  */
 
   /* function exit code */
@@ -17573,7 +17573,7 @@ static PyObject *__pyx_pf_4main_14PyEventHandler_12__setstate_cython__(CYTHON_UN
   return __pyx_r;
 }
 
-/* "base.pxd":79
+/* "base.pxd":80
  *         bool schedulePy(object p)
  * 
  * cdef inline mainThread(object o):             # <<<<<<<<<<<<<<
@@ -17585,14 +17585,14 @@ static CYTHON_INLINE PyObject *__pyx_f_4base_mainThread(PyObject *__pyx_v_o) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("mainThread", 0);
 
-  /* "base.pxd":80
+  /* "base.pxd":81
  * 
  * cdef inline mainThread(object o):
  *     ThreadController.sharedState().schedulePy(o)             # <<<<<<<<<<<<<<
  */
   (void)(ThreadController::sharedState()->schedulePy(__pyx_v_o));
 
-  /* "base.pxd":79
+  /* "base.pxd":80
  *         bool schedulePy(object p)
  * 
  * cdef inline mainThread(object o):             # <<<<<<<<<<<<<<

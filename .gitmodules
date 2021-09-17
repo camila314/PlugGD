@@ -1,0 +1,12 @@
+[submodule "gd.h"]
+	path = gd.h
+	url = https://github.com/HJFod/gd.h
+[submodule "cocos-headers"]
+	path = cocos-headers
+	url = https://github.com/HJFod/cocos-headers
+[submodule "minhook"]
+	path = minhook
+	url = https://github.com/TsudaKageyu/minhook
+[submodule "tinydir"]
+	path = tinydir
+	url = https://github.com/cxong/tinydir

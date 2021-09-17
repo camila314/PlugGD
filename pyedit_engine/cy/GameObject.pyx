@@ -21,29 +21,29 @@ cdef public class PyGameObject(PyCCObject) [object PyGameOb, type PyGameObj]:
 
     @property
     def base_hue(self):
-        if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:
-            return self.gameob_inst().getRelativeSpriteColor(0).hue
+        if <long>getRelSpriteColor(self.gameob_inst(), 0) != 0:
+            return getRelSpriteColor(self.gameob_inst(), 0).hue
         else:
             return 0.0
 
     @base_hue.setter
     def base_hue(self, v):
-        if <long>self.gameob_inst().getRelativeSpriteColor(0) != 0:
-            self.gameob_inst().getRelativeSpriteColor(0).hue = v
+        if <long>getRelSpriteColor(self.gameob_inst(), 0) != 0:
+            getRelSpriteColor(self.gameob_inst(), 0).hue = v
         else:
             pass
 
     @property
     def detail_hue(self):
-        if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:
-            return self.gameob_inst().getRelativeSpriteColor(2).hue
+        if <long>getRelSpriteColor(self.gameob_inst(), 2) != 0:
+            return getRelSpriteColor(self.gameob_inst(), 2).hue
         else:
             return 0.0
 
     @detail_hue.setter
     def detail_hue(self, v):
-        if <long>self.gameob_inst().getRelativeSpriteColor(2) != 0:
-            self.gameob_inst().getRelativeSpriteColor(2).hue = v
+        if <long>getRelSpriteColor(self.gameob_inst(), 2) != 0:
+            getRelSpriteColor(self.gameob_inst(), 2).hue = v
         else:
             pass
 

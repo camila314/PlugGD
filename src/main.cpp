@@ -73,7 +73,7 @@ class swag : public EditorUI {
         CCPoint base = ccp(rgt, top);
         menu->setPosition(base);
 
-        auto lam = +[](EditorUI* slf){
+        void (__fastcall *lam)(EditorUI*, float) = [](EditorUI* slf, float fuckyou){
             if (!engine::isRunning()) {
                 slf->getChildByTag(2653)->getChildByTag(8486)->setVisible(false);
                 slf->getChildByTag(2653)->getChildByTag(8214)->setVisible(true);
@@ -184,14 +184,13 @@ void inject() {
         MH_CreateHook(reinterpret_cast<LPVOID>(base+0x7caf0), reinterpret_cast<void*&>(tmp3), reinterpret_cast<void**>(&swag::$setupCreateMenu));
     #endif
 
-    //engine::init();
-    printf("injectd\n");
-    //Cacao::scheduleFunction(+[](){scripter()->refreshFiles(false);});
+    engine::init();
+    printf("injectd v2\n");
+    Cacao::scheduleFunction(+[](){scripter()->refreshFiles(false);});
 
     #if _WIN32
-    printf("hookd, create menu is %p, base is %p\n", base+0x7caf0, base);
+    printf("hookd, create menu is %p, base is %x\n", base+0x7caf0, base);
     MH_EnableHook(MH_ALL_HOOKS);
-    Cacao::scheduleFunction(idfk);
     #endif
 }
 

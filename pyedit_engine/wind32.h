@@ -8,6 +8,7 @@
 #pragma warning(pop)
 #include <MinHook.h>
 #include <gd.h>
+#include <mutex>
 using namespace gd;
 using namespace cocos2d;
 namespace Cacao {
@@ -47,9 +48,31 @@ namespace Cacao {
 	    return gs;
 	}
 
+	inline void(__thiscall *_schedOrig)(void*, float) = NULL;
+	inline std::vector<void(*)(void)> _schedQ;
+	inline std::mutex _schedM = std::mutex();
+
+	inline void __fastcall _sched(void* d1, void*, float d2) {
+		_schedM.lock();
+		while (!_schedQ.empty()) {
+			(_schedQ.back())();
+			_schedQ.pop_back();
+		}
+		_schedM.unlock();
+	}
 	template <typename K>
 	inline void scheduleFunction(K func) {
-	    GameManager::sharedState()->getScheduler()->scheduleSelector(reinterpret_cast<CC_SCHED&>(func), GameManager::sharedState(), 0.0, 0, 0.0, false);
+		static bool a;
+		if (!a) {
+			a = true;
+			uintptr_t b = reinterpret_cast<uintptr_t>(GetModuleHandleA(NULL));
+			MH_CreateHook((LPVOID)(b+0xce440), _sched, (void**)&_schedOrig);
+			MH_EnableHook((LPVOID)(b+0xce440));
+		}
+		_schedM.lock();
+		typedef void(*fptr)(void);
+		_schedQ.push_back(reinterpret_cast<fptr&>(func));
+	    _schedM.unlock();
 	}
 
 	class CacAlertLayer : public FLAlertLayer {

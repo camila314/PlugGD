@@ -36,6 +36,17 @@ inline int gob_getID(GameObject* gob) {
 	#endif
 }
 
+inline GJSpriteColor* getRelSpriteColor(GameObject* g, int k) {
+	#if __APPLE__
+	return g->getRelativeSpriteColor(k);
+	#else
+	uintptr_t base = reinterpret_cast<uintptr_t>(GetModuleHandleA(0));
+	auto fptr = reinterpret_cast<GJSpriteColor*(__thiscall *)(GameObject*, int)>(base+0xef520);
+	return fptr(g, k);
+	#endif
+}
+
+
 inline LevelEditorLayer* getEditorLayer(EditorUI* eui) {
 	#if __APPLE__
 	return eui->_editorLayer();

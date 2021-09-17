@@ -1,6 +1,7 @@
 #include <ScriptController.h>
 #include <../tinydir/tinydir.h>
-
+#include <fstream>
+#include <iostream>
 #if __APPLE__
 #include <CoreServices/CoreServices.h>
 #else
@@ -75,7 +76,7 @@ std::string ScriptController::plugFolder() {
 	    SHGetPathFromIDList(pidl, buffer);
 	    CoTaskMemFree(pidl);
 
-		return std::string(buffer) + "\\Geometry Dash\\scripts\\";
+		return std::string(buffer) + "\\GeometryDash\\scripts\\";
 	#else
 		FSRef ref;
 		char path[PATH_MAX];
@@ -87,39 +88,45 @@ std::string ScriptController::plugFolder() {
 	#endif
 }
 
+
+static auto read_file(std::string path) -> std::string {
+    constexpr auto read_size = std::size_t{4096};
+    auto stream = std::ifstream{path.data()};
+    stream.exceptions(std::ios_base::badbit);
+
+    auto out = std::string{};
+    auto buf = std::string(read_size, '\0');
+    while (stream.read(& buf[0], read_size)) {
+        out.append(buf, 0, stream.gcount());
+    }
+    out.append(buf, 0, stream.gcount());
+    return out;
+}
+
 bool ScriptController::refreshFiles(bool err) {
 	std::vector<std::string> files;
 	std::string json;
+	bool found = false;
 
 
 	tinydir_dir dir;
 	if (tinydir_open(&dir, plugFolder().c_str()) == -1) {
+
+		#if _WIN32
+		SHCreateDirectoryEx( NULL, plugFolder().c_str(), NULL );
+		#else
+		//todo fix this
 		if (err) FLAlertLayer::create(NULL, "Error parsing config", "Ok", NULL, "Cannot access script folder")->show();
 		return false;
+		#endif
 	}
 	while (dir.has_next) {
 		tinydir_file file;
 		tinydir_readfile(&dir, &file);
 		if (!file.is_dir) {
 			if (std::string(file.name) == "config.json") {
-				FILE* fp = fopen(file.path, "r");
-
-				if (fp) {
-					fseek(fp, 0, SEEK_END);
-					auto size = ftell(fp);
-					fseek(fp, 0, SEEK_SET);
-
-					char* buf = reinterpret_cast<char*>(malloc(size+1));
-					fread(buf, size, 1, fp);
-					buf[size] = '\0';
-					fclose(fp);
-
-					json = buf;
-
-					free(buf);
-				} else {
-					printf("bitch returned null: %s\n", file.path);
-				}
+				json = read_file(std::string(file.name));
+				found = true;
 			}
 			files.push_back(std::string(file.name));
 		}
@@ -127,10 +134,16 @@ bool ScriptController::refreshFiles(bool err) {
 	}
 	tinydir_close(&dir);
 
+	if (!found) {
+
+		std::ofstream fp(plugFolder()+"/config.json");
+		json = "{\n    \"bindings\": {}\n}";
+		fp << json;
+		fp.close();
+	}
 	rapidjson::Document document;
 
 	if (document.Parse<rapidjson::kParseDefaultFlags>(json.c_str()).HasParseError()) {
-		printf("oh noes :( %s \n", document.GetParseError());
 		printf("%s\n", json.c_str());
 		#if __APPLE__
 		auto st = std::string(document.GetParseError());
