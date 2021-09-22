@@ -11,26 +11,22 @@ if(WIN32)
 	set(CMAKE_GENERATOR_PLATFORM x86)
 endif()
 
-find_package (Python3 COMPONENTS Development)
-include (FindCython)
-
-if(NOT CYTHON_EXECUTABLE)
-  message(FATAL_ERROR "Can't find cython!")
-endif()
 
 if(APPLE)
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated")
 	add_definitions(-DCC_TARGET_OS_MAC)
+	set(CyLocation ${CMAKE_SOURCE_DIR}/PyMac/bin/cython)
 else()
 	add_definitions(-DCC_TARGET_OS_WIN32)
+	set(CyLocation ${CMAKE_SOURCE_DIR}/Pyw32/python.exe -m cython)
 endif()
 
 add_custom_command(
-	COMMAND ${CYTHON_EXECUTABLE} --cplus ${CMAKE_CURRENT_SOURCE_DIR}/cy/main.pyx
+	COMMAND ${CyLocation} --cplus ${CMAKE_CURRENT_SOURCE_DIR}/cy/main.pyx
 	DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/cy/main.pyx
 	OUTPUT cy/main.h
 	OUTPUT cy/main.cpp
-	COMMENT "Generating headers"
+	COMMENT "Generating cython"
 )
 
 add_library(${PROJECT_NAME} STATIC 
@@ -46,8 +42,14 @@ add_custom_target(CyBindings ALL
    DEPENDS cy/main.cpp
 )
 
+if(APPLE)
+	set(PyEmbed ${CMAKE_SOURCE_DIR}/PyMac/include/python3.8)
+else()
+	set(PyEmbed ${CMAKE_SOURCE_DIR}/Pyw32/include)
+endif()
+
 target_include_directories(${PROJECT_NAME} PRIVATE
-	${Python3_INCLUDE_DIRS}
+	${PyEmbed}
 )
 
 if (WIN32)

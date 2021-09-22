@@ -22,6 +22,7 @@ cdef public class PyCCObject [object _CCObject, type __CCObject]:
         elif ti in ("GameObject", "EffectGameObject", "LabelGameObject", "RingObject", "AnimatedGameObject", "TeleportPortalObject"):
             return PyGameObject().fromPtr(self.inst)
         else:
+            print(ti)
             return self
 
 def thread_sync(func):

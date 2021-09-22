@@ -64,7 +64,10 @@ inline char const* demangle(const char* name) {
 
     return (status==0) ? res : name ;
     #else
-    return name;
+    std::string sn(name);
+
+    sn.erase(sn.find("class "), 6);
+    return sn.c_str();
     #endif
 }
 

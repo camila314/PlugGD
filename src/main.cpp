@@ -16,8 +16,8 @@ class swag: public $EditorUI<swag> {
 #else
 class swag : public EditorUI {
  public:
-    static void(*$setupCreateMenu)(swag*);
-    static void(*$keyDown)(swag*, int);
+    static void(__thiscall *$setupCreateMenu)(swag*);
+    static void(__thiscall *$keyDown)(swag*, int);
 #endif
  public:
     void onPress(CCObject* sender) {
@@ -86,7 +86,11 @@ class swag : public EditorUI {
         _usable = true;
     }
 
+    #if __APPLE__
     void keyDown(cocos2d::enumKeyCodes key) {
+    #else
+    void keyDown_(cocos2d::enumKeyCodes key) { // fixes really wacky virtual shit
+    #endif
         if (!_usable) {
             #if __APPLE__
                 $EditorUI::keyDown(key);
@@ -96,13 +100,6 @@ class swag : public EditorUI {
             return;
         }
         auto dispatcher = CCDirector::sharedDirector()->getKeyboardDispatcher();
-
-        Keybind justClick;
-        justClick.exists = true;
-        justClick.shift = dispatcher->getShiftKeyPressed();
-        justClick.ctrl = dispatcher->getControlKeyPressed();
-        justClick.alt = dispatcher->getAltKeyPressed();
-        justClick.key = key;
 
         for (auto [k, v] : scripter()->getKeybinds()) {
             if (k.shift != dispatcher->getShiftKeyPressed())
@@ -115,12 +112,15 @@ class swag : public EditorUI {
             if (k.key == key) {
                 printf("running %s\n", v.c_str());
 
-                if (this->getChildByTag(2653)) {
+                /*if (this->getChildByTag(2653)) {
                     this->getChildByTag(2653)->getChildByTag(8486)->setVisible(true);
                     this->getChildByTag(2653)->getChildByTag(8214)->setVisible(false);
-                }
+                }*/
+                
                 //std::cout<<std::string(k)<<"\n";
+                printf("ok what\n");
                 engine::runFile((scripter()->plugFolder() + v).c_str(), std::string(k));
+                printf("thing said it ran file\n");
                 return;
             } 
         }
@@ -134,8 +134,8 @@ class swag : public EditorUI {
 } ya;
 #else
 };
-void(*swag::$setupCreateMenu)(swag*) = nullptr;
-void(*swag::$keyDown)(swag*, int) = nullptr;
+void(__thiscall *swag::$setupCreateMenu)(swag*) = nullptr;
+void(__thiscall *swag::$keyDown)(swag*, int) = nullptr;
 #endif
 
 #if __APPLE__
@@ -143,7 +143,7 @@ class $redirect(GameManager) {
 #else
 class swag_2 {
  public:
-    static void(*$returnToLastScene)(swag_2*, GJGameLevel* c);
+    static void(__thiscall *$returnToLastScene)(swag_2*, GJGameLevel* c);
 #endif
  public:
     void returnToLastScene(GJGameLevel* carry) {
@@ -158,7 +158,7 @@ class swag_2 {
 } ya2;
 #else
 };
-void(*swag_2::$returnToLastScene)(swag_2*, GJGameLevel* c) = nullptr;
+void(__thiscall *swag_2::$returnToLastScene)(swag_2*, GJGameLevel* c) = nullptr;
 #endif
 
 #if __APPLE__
@@ -178,14 +178,14 @@ void inject() {
 
         auto tmp1 = &swag_2::returnToLastScene;
         MH_CreateHook(reinterpret_cast<LPVOID>(base+0xce6a0), reinterpret_cast<void*&>(tmp1), reinterpret_cast<void**>(&swag_2::$returnToLastScene));
-        auto tmp2 = &swag::keyDown;
+        auto tmp2 = &swag::keyDown_;
         MH_CreateHook(reinterpret_cast<LPVOID>(base+0x91a30), reinterpret_cast<void*&>(tmp2), reinterpret_cast<void**>(&swag::$keyDown));
         auto tmp3 = &swag::setupCreateMenu;
         MH_CreateHook(reinterpret_cast<LPVOID>(base+0x7caf0), reinterpret_cast<void*&>(tmp3), reinterpret_cast<void**>(&swag::$setupCreateMenu));
     #endif
 
     engine::init();
-    printf("injectd v2\n");
+    printf("injectd\n");
     Cacao::scheduleFunction(+[](){scripter()->refreshFiles(false);});
 
     #if _WIN32

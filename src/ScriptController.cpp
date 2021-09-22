@@ -90,17 +90,16 @@ std::string ScriptController::plugFolder() {
 
 
 static auto read_file(std::string path) -> std::string {
-    constexpr auto read_size = std::size_t{4096};
-    auto stream = std::ifstream{path.data()};
-    stream.exceptions(std::ios_base::badbit);
+	std::string ret = "epic fail";
+	std::ifstream h(path, std::ios::ate);
 
-    auto out = std::string{};
-    auto buf = std::string(read_size, '\0');
-    while (stream.read(& buf[0], read_size)) {
-        out.append(buf, 0, stream.gcount());
-    }
-    out.append(buf, 0, stream.gcount());
-    return out;
+	if (h.is_open()) {
+		ret.resize(h.tellg());
+		h.seekg(0u, std::ios::beg);
+		h.read(ret.data(), ret.size());
+	}
+
+	return ret;
 }
 
 bool ScriptController::refreshFiles(bool err) {
@@ -125,7 +124,7 @@ bool ScriptController::refreshFiles(bool err) {
 		tinydir_readfile(&dir, &file);
 		if (!file.is_dir) {
 			if (std::string(file.name) == "config.json") {
-				json = read_file(std::string(file.name));
+				json = read_file(std::string(file.path));
 				found = true;
 			}
 			files.push_back(std::string(file.name));
@@ -144,7 +143,7 @@ bool ScriptController::refreshFiles(bool err) {
 	rapidjson::Document document;
 
 	if (document.Parse<rapidjson::kParseDefaultFlags>(json.c_str()).HasParseError()) {
-		printf("%s\n", json.c_str());
+		printf("insane: %s\n", json.c_str());
 		#if __APPLE__
 		auto st = std::string(document.GetParseError());
 		#else

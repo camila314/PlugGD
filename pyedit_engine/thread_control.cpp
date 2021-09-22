@@ -7,9 +7,14 @@ bool ThreadController::schedulePy(PyObject* p) {
 
         PyThreadState *mainThreadState = PyEval_SaveThread();
         things.push_back(p);
+
+        //dont judge this bllshit
+        volatile int never_4 = 3;
         while (!things.empty()) {
-            //__asm__ volatile("nop");
-            things.back();
+            if (never_4 == 4)
+                things.pop_back();
+            else
+                continue;
         }
         PyEval_RestoreThread(mainThreadState);
         return true;

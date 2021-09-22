@@ -5,9 +5,9 @@
 // shut up cocos
 #pragma warning(push, 0)
 #include <cocos2d.h>
+#include <gd.h>
 #pragma warning(pop)
 #include <MinHook.h>
-#include <gd.h>
 #include <mutex>
 using namespace gd;
 using namespace cocos2d;

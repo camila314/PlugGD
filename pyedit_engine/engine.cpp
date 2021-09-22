@@ -175,7 +175,9 @@ namespace engine {
         }).detach();
         #else
         std::thread([](){
-            for (;;) {
+            //shush
+            volatile bool cum = true;
+            while (cum) {
                 bool shift = GetAsyncKeyState(VK_SHIFT) & 0x8000;
                 bool ctrl = GetAsyncKeyState(VK_CONTROL) & 0x8000;
 

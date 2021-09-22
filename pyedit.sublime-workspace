@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"LOADER_S",
+				"LOADER_STR().c_str());"
+			],
+			[
+				"HMODULE",
+				"ZYDIS_MACHINE_MODE_MAX_VALUE"
+			],
+			[
+				"getRelativeSpriteC",
+				"getRelativeSpriteColor"
+			],
+			[
+				"_sched",
+				"_schedOrig"
+			],
+			[
+				"GetMo",
+				"GetModuleHandleA"
+			],
+			[
+				"lo",
+				"lock();"
+			],
+			[
+				"returnTo",
+				"returnToLastScene"
+			],
+			[
+				"CCMenuI",
+				"CCMenuItemSpriteExtra"
+			],
+			[
 				"MH_",
 				"MH_CreateHook"
 			],
@@ -150,10 +182,6 @@
 			[
 				"index",
 				"indexer_block"
-			],
-			[
-				"CCMenuI",
-				"CCMenuItemSpriteExtra"
 			],
 			[
 				"COPIED_COL",
@@ -657,42 +685,50 @@
 	"expanded_folders":
 	[
 		"/Users/jakrillis/projects/pyedit",
-		"/Users/jakrillis/projects/pyedit/Cacao",
-		"/Users/jakrillis/projects/pyedit/Cacao/Auto",
-		"/Users/jakrillis/projects/pyedit/Cacao/Auto/base",
-		"/Users/jakrillis/projects/pyedit/Cacao/include",
 		"/Users/jakrillis/projects/pyedit/gd.h",
-		"/Users/jakrillis/projects/pyedit/gd.h/menu_nodes",
-		"/Users/jakrillis/projects/pyedit/gd.h/sprite_nodes",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine",
-		"/Users/jakrillis/projects/pyedit/src"
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy",
+		"/Users/jakrillis/projects/pyedit/src",
+		"/Users/jakrillis/projects/pyedit/tinydir",
+		"/Users/jakrillis/projects/pyedit/w32bootstrap"
 	],
 	"file_history":
 	[
-		"/Users/jakrillis/projects/pyedit/gd.h/readme.md",
-		"/Users/jakrillis/projects/pyedit/src/ScriptLayer.h",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/engine.cpp",
-		"/Users/jakrillis/projects/pyedit/Cacao/Auto/base/cc_defs.begin.hpp",
-		"/Users/jakrillis/projects/pyedit/Cacao/Auto/cinnamon.mm",
-		"/Users/jakrillis/projects/pyedit/src/ScriptLayer.cpp",
-		"/Users/jakrillis/projects/pyedit/src/ScriptController.h",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/wind32.h",
+		"/Users/jakrillis/projects/pyedit/w32bootstrap/dllmain.cpp",
+		"/Users/jakrillis/projects/pyedit/w32bootstrap/CMakeLists.txt",
+		"/Users/jakrillis/projects/pyedit/CMakeLists.txt",
 		"/Users/jakrillis/projects/pyedit/src/ScriptController.cpp",
 		"/Users/jakrillis/projects/pyedit/src/main.cpp",
-		"/Users/jakrillis/projects/pyedit/gd.h/layers_scenes_transitions_nodes/EditorUI.h",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/main.pyx",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/extra_bindings.h",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/engine.cpp",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/thread_control.h",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/thread_control.cpp",
+		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/circle tool.py",
+		"/Users/jakrillis/projects/pyedit/pyedit_engine/CMakeLists.txt",
 		"/Users/jakrillis/projects/gdmods/gdstdlib/research.txt",
+		"/Users/jakrillis/t.cpp",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/GameObject.pyx",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/base.pxd",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/wind32.h",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/extra_bindings.h",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/thread_control.h",
-		"/Users/jakrillis/projects/pyedit/gd.h/sprite_nodes/GameObject.h",
-		"/Users/jakrillis/projects/pyedit/CMakeLists.txt",
-		"/Users/jakrillis/tmp/build/CMakeLists.txt",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/CMakeLists.txt",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/thread_control.cpp",
+		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/Circle Tool.py",
+		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/config.json",
+		"/Users/jakrillis/projects/pyedit/.gitmodules",
+		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/config.jso",
+		"/Users/jakrillis/projects/pyedit/.gitignore",
+		"/Users/jakrillis/projects/wsXbot/wsXbot/dllmain.cpp",
+		"/Users/jakrillis/projects/pyedit/src/ScriptLayer.cpp",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/cmake/FindCython.cmake",
+		"/Users/jakrillis/projects/pyedit/Cacao/include/cocos2dx/custom/Sprites/CCMenuItemSpriteExtra/CCMenuItemSpriteExtra.h",
+		"/Users/jakrillis/projects/pyedit/src/ScriptController.h",
+		"/Users/jakrillis/projects/pyedit/gd.h/readme.md",
+		"/Users/jakrillis/projects/pyedit/src/ScriptLayer.h",
+		"/Users/jakrillis/projects/pyedit/Cacao/Auto/base/cc_defs.begin.hpp",
+		"/Users/jakrillis/projects/pyedit/Cacao/Auto/cinnamon.mm",
+		"/Users/jakrillis/projects/pyedit/gd.h/layers_scenes_transitions_nodes/EditorUI.h",
+		"/Users/jakrillis/projects/pyedit/gd.h/sprite_nodes/GameObject.h",
+		"/Users/jakrillis/tmp/build/CMakeLists.txt",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/helper_hooks.cpp",
-		"/Users/jakrillis/t.cpp",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/UIHandler.pyx",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/EditorUI.pyx",
 		"/Users/jakrillis/projects/pyedit/Cacao/include/cc_defs.hpp",
@@ -700,7 +736,6 @@
 		"/Users/jakrillis/t.cp",
 		"/Users/jakrillis/projects/pyedit/main.cpp",
 		"/Users/jakrillis/projects/pyedit/LICENSE",
-		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/config.json",
 		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/Select All.py",
 		"/Users/jakrillis/projects/builds/fhook_b/Level-To-Layout by Camden314/main/slope1.txt",
 		"/Users/jakrillis/projects/builds/fhook_b/Level-To-Layout by Camden314/main/remove.py",
@@ -716,7 +751,6 @@
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/helper_hooks.h",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/helper_hooks.mm",
 		"/Users/jakrillis/projects/pyedit/Cacao/include/cocos2dx/sprite_nodes/CCSprite.h",
-		"/Users/jakrillis/Library/Application Support/GeometryDash/scripts/Circle Tool.py",
 		"/Users/jakrillis/projects/pyedit/Cacao/include/cocos2dx/cocoa/CCDictionary.h",
 		"/Users/jakrillis/projects/pyedit/Cacao/include/cocos2dx/base_nodes/CCNode.h",
 		"/Users/jakrillis/projects/pyedit/rapidjson/CMakeLists.txt",
@@ -751,7 +785,6 @@
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/PyEvent.pyx",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/a.out_2021-08-31-140950_c314.crash",
 		"/Users/jakrillis/projects/builds/MacOSX-SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/tr1/random",
-		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/main.pyx",
 		"/Users/jakrillis/projects/pyedit/pyedit_engine/cy/main.cpp",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-30-123628_c314.crash",
 		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-30-130519_c314.crash",
@@ -788,15 +821,7 @@
 		"/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dx/menu_nodes/CCMenuItem.h",
 		"/Users/jakrillis/Library/Application",
 		"/usr/local/lib/Cacao/include/cocos2dext/CocoStudio/Json/rapidjson/document.h",
-		"/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dx/platform/mac/CCFileUtilsMac.mm",
-		"/Users/jakrillis/Support/GeometryDash/scripts/config.json",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/Geometry Dash_2021-08-23-000930_c314.crash",
-		"/Users/jakrillis/projects/pyedit/rapidjson/include/rapidjson/rapidjson.h",
-		"/var/folders/g2/6zj34k813451t2pgp1wpgmbc0000gn/T/t-65c0c6.cpp",
-		"/Users/jakrillis/Library/Logs/DiagnosticReports/clang_2021-08-22-213528-1_c314.crash",
-		"/Users/jakrillis/projects/graphicsgd2/ggd.py",
-		"/Users/jakrillis/projects/pyedit/rapidjson/include/rapidjson/allocators.h",
-		"/Users/jakrillis/projects/pyedit/rapidjson/include/rapidjson/document.h"
+		"/Users/jakrillis/projects/cacao/template/Cacao/include/cocos2dx/platform/mac/CCFileUtilsMac.mm"
 	],
 	"find":
 	{
@@ -815,6 +840,36 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"justClick",
+			"keyDown",
+			"running ",
+			"keyDown",
+			"GetAsync",
+			"swag",
+			"engineThread",
+			"tinydir_file ",
+			"tinydir_file",
+			"slope",
+			"pyedit_engine",
+			"sqlite3",
+			"PlayLayer",
+			"STATIC",
+			"Python3_",
+			"LIBRARIES",
+			"Python_",
+			"Python3_",
+			"scheduleFunction",
+			"CCScheduler",
+			"CCDirector",
+			"GetParseError",
+			"class GenericValue",
+			"ParseErrorCode",
+			"class GenericValue",
+			"GenericValue ",
+			"GenericValue :",
+			"GenericValue",
+			"document",
+			"FLAlert",
 			"GJSpriteColor",
 			"FLAlertLayer",
 			"m_mainLayer",
@@ -912,37 +967,7 @@
 			"ButtonSprite::create",
 			"ButtonSprite",
 			"kParseInsituFlag",
-			"parseFlags",
-			"ParseFlag",
-			"ParseFlags",
-			"RAPIDJSON_NAMESPACE",
-			".h:",
-			"rapidjson.h",
-			"reader.h",
-			"RAPIDJSON_RAPIDJSON_H_",
-			"RAPIDJSON_NAMESPACE_BEGIN",
-			"RAPIDJSON_DIAG_PUSH",
-			"effc",
-			"lvl",
-			"tinydir_file",
-			"simplereader",
-			"add_",
-			"add_executable",
-			"#if RAPIDJSON_HAS_CXX11",
-			"CXX11",
-			"cycle",
-			"Speed",
-			"33,$32",
-			"33,\\$32",
-			"Cape ",
-			"Cape.+\\:",
-			"Cape",
-			"The",
-			"camden",
-			"FLAlertLayer",
-			"ccTouchEnded",
-			"ccTouchMoved",
-			"Thn288"
+			"parseFlags"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -950,6 +975,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"python38",
 			"m_pLayer",
 			"m_pButtonMenu",
 			"m_pBtnMenu",
@@ -1018,7 +1044,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 318.0
+		"height": 184.0
 	},
 	"output.find_results":
 	{
@@ -1028,7 +1054,7 @@
 	"project": "pyedit.sublime-project",
 	"replace":
 	{
-		"height": 68.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":

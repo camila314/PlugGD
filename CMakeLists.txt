@@ -18,7 +18,8 @@ if(APPLE)
 		Cacao/include/cocos2dx/custom/Sprites/CCMenuItemSpriteExtra
 	)
 else()
-
+	set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Out")
+	set(CMAKE_BUILD_TYPE RelWithDebInfo)
 	add_definitions(-DCC_TARGET_OS_WIN32)
 	include_directories(
 		gd.h/cocos2dx
@@ -34,7 +35,8 @@ else()
 		cocos-headers/cocos2dx/platform/third_party/win32/OGLES
 		minhook/include
 	)
-	add_subdirectory(minhook)
+	add_subdirectory(minhook EXCLUDE_FROM_ALL)
+	add_subdirectory(w32bootstrap)
 endif()
 
 include_directories(
@@ -55,25 +57,8 @@ if(WIN32)
 	set(CMAKE_GENERATOR_PLATFORM x86)
 endif()
 
-find_package (Python3 COMPONENTS Development)
-
-if(NOT Python3_FOUND)
-  message(FATAL_ERROR "Can't find python3!")
-endif()
-
-if(WIN32)
-	set(Python32 0)
-	execute_process(
-		COMMAND ${Python3_EXECUTABLE} -c "import struct;print(struct.calcsize(\"P\")*8, end=\"\")"
-		OUTPUT_VARIABLE Python32)
-
-	if(Python32 EQUAL 64)
-		message(FATAL_ERROR "Python must be 32-bit! " ${Python3_LIBRARIES})
-	endif()
-endif()
-
 add_subdirectory(pyedit_engine)
-add_subdirectory(rapidjson)
+add_subdirectory(rapidjson EXCLUDE_FROM_ALL)
 
 add_library(${PROJECT_NAME} SHARED 
 	src/main.cpp 
@@ -81,11 +66,20 @@ add_library(${PROJECT_NAME} SHARED
 	src/ScriptController.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} pyedit_engine ${Python3_LIBRARIES})
+
+if(APPLE)
+	set(PyEmbed ${CMAKE_BINARY_DIR}/PyMac/lib)
+	file(COPY PyMac DESTINATION ./)
+else()
+	set(PyEmbed ${CMAKE_SOURCE_DIR}/Pyw32)
+	#file(COPY Pyw32 DESTINATION ./)
+endif()
+
+target_link_directories(${PROJECT_NAME} PRIVATE ${PyEmbed})
 
 if(APPLE)
 	target_link_directories(${PROJECT_NAME} PRIVATE Cacao)
-	target_link_libraries(${PROJECT_NAME} Cacao "-framework CoreServices -framework Cocoa")
+	target_link_libraries(${PROJECT_NAME} Cacao python3.8 pyedit_engine "-framework CoreServices -framework Cocoa")
 
 	add_custom_command(
 		TARGET  ${PROJECT_NAME}
@@ -96,8 +90,16 @@ if(APPLE)
 else()
 	target_link_libraries(${PROJECT_NAME} 
 		minhook
+		python38
+		pyedit_engine
 		"${CMAKE_SOURCE_DIR}/cocos-headers/cocos2dx/libcocos2d.lib"
 		"${CMAKE_SOURCE_DIR}/cocos-headers/extensions/libExtensions.lib"
 	)
 
+	install(TARGETS ${PROJECT_NAME} 
+	DESTINATION ${CMAKE_BINARY_DIR}/out
+	)
+	install(DIRECTORY Pyw32 DESTINATION ${CMAKE_BINARY_DIR}/out
+		PATTERN "site-packages/Cython/" EXCLUDE
+		)
 endif()
