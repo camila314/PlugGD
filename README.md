@@ -1,6 +1,6 @@
-# PoweredByPy
+# PlugGD
 
-Python interpreter embedded into the game Geometry Dash, designed for helping people automate tasks for creating. Allows the user to run scripts by using customizable keybinds. Currently works for mac only but windows porting is in the near future. Name inspired by my man PoweredByPie who claims to not like python.
+Plug-in system and python interpreter embedded into the game Geometry Dash, designed for helping people automate tasks for creating. Allows the user to run plug-ins by using customizable keybinds. Works for both mac and windows.
 
 ## Example Script
 
