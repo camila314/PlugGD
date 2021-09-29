@@ -165,8 +165,8 @@
 					"shell_cmd": "make -j4 GDML",
 				},
 				{
-					"name": "pyedit",
-					"shell_cmd": "make -j4 pyedit",
+					"name": "PlugGD",
+					"shell_cmd": "make -j4 PlugGD",
 				},
 				{
 					"name": "pyedit_engine",

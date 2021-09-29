@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
-project(pyedit VERSION 0.1.0 LANGUAGES CXX)
+project(PlugGD VERSION 0.1.0 LANGUAGES CXX)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fms-extensions -Xlinker --no-demangle")
 set(CMAKE_CXX_STANDARD 17)
 if(APPLE)
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated -rpath \"@loader_path\"")
 	add_definitions(-DCC_TARGET_OS_MAC)
 	include_directories(
 		Cacao/
@@ -70,6 +70,7 @@ add_library(${PROJECT_NAME} SHARED
 if(APPLE)
 	set(PyEmbed ${CMAKE_BINARY_DIR}/PyMac/lib)
 	file(COPY PyMac DESTINATION ./)
+	message(WRNING ${PyEmbed})
 else()
 	set(PyEmbed ${CMAKE_SOURCE_DIR}/Pyw32)
 	#file(COPY Pyw32 DESTINATION ./)
@@ -80,6 +81,12 @@ target_link_directories(${PROJECT_NAME} PRIVATE ${PyEmbed})
 if(APPLE)
 	target_link_directories(${PROJECT_NAME} PRIVATE Cacao)
 	target_link_libraries(${PROJECT_NAME} Cacao python3.8 pyedit_engine "-framework CoreServices -framework Cocoa")
+
+	#add_custom_command(
+	#	TARGET ${PROJECT_NAME}
+	#	COMMAND install_name_tool -change /Users/jakrillis/projects/pyedit/PyMac/lib/libpython3.8.dylib @loader_path/PyMac/lib/libpython3.8.dylib lib${PROJECT_NAME}.dylib
+	#	WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+	#)
 
 	add_custom_command(
 		TARGET  ${PROJECT_NAME}

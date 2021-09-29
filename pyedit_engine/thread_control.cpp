@@ -1,5 +1,8 @@
 #include "thread_control.h"
 #include <thread>
+#include <atomic>
+
+std::atomic<bool> _cumshit;
 
 bool ThreadController::schedulePy(PyObject* p) {
     if (p && PyCallable_Check(p)) { // can we call it?
@@ -8,13 +11,10 @@ bool ThreadController::schedulePy(PyObject* p) {
         PyThreadState *mainThreadState = PyEval_SaveThread();
         things.push_back(p);
 
-        //dont judge this bllshit
-        volatile int never_4 = 3;
         while (!things.empty()) {
-            if (never_4 == 4)
+            if (_cumshit == true) {
                 things.pop_back();
-            else
-                continue;
+            }
         }
         PyEval_RestoreThread(mainThreadState);
         return true;
@@ -31,6 +31,7 @@ ThreadController* ThreadController::sharedState() {
 void ThreadController::update(float o) {
     threadID = std::this_thread::get_id();//pthread_self();
     //return;
+    _cumshit = false;
     if (things.empty()) {
         return;
     }

@@ -199,6 +199,7 @@ DWORD WINAPI thread_func(void* hModule) {
     AllocConsole();
     SetConsoleTitleA("PoweredByPy debug");
     freopen_s(reinterpret_cast<FILE**>(stdout), "CONOUT$", "w", stdout);
+    freopen_s(reinterpret_cast<FILE**>(stderr), "CONOUT$", "w", stderr);
 
     inject();
     return true;

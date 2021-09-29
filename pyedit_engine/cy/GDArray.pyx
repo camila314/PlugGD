@@ -8,9 +8,8 @@ cdef public class PyCCArray(PyCCObject) [object _CCArray, type __CCArray]:
             raise ValueError("Array got deallocated")
         return <CCArray*>self.inst
 
-    @thread_sync
     def __len__(self):
-        return self.arr_inst().count()
+        return thread_sync(lambda: self.arr_inst().count())()
 
     @thread_sync
     def __getitem__(self, e):

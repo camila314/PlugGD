@@ -14,8 +14,8 @@ struct PyGameOb;
  * from base cimport *
  * 
  * cdef public class PyCCObject [object _CCObject, type __CCObject]:             # <<<<<<<<<<<<<<
- *     cdef CCObject* inst
- *     cdef CCObject* ob_inst(self):
+ * 
+ *     ## Internal variable for interacting with GD
  */
 struct _CCObject {
   PyObject_HEAD
@@ -34,7 +34,7 @@ struct _CCArray {
   struct _CCObject __pyx_base;
 };
 
-/* "../../pyedit_engine/cy/GDArray.pyx":47
+/* "../../pyedit_engine/cy/GDArray.pyx":46
  * 
  * 
  * cdef public class GameObjArray(PyCCArray) [object _GOArray, type __GOArray]:             # <<<<<<<<<<<<<<
@@ -49,8 +49,8 @@ struct _GOArray {
  * from base cimport *
  * 
  * cdef public class Editor(PyCCObject) [object PyEditorUI, type PyEditUI]:             # <<<<<<<<<<<<<<
- * 
- *     cdef EditorUI* edit_inst(self):
+ *     """
+ *     Handle to the EditorUI instance in gd. Gives you access to endpoints of things you would be able to do in the editor,
  */
 struct PyEditorUI {
   struct _CCObject __pyx_base;
@@ -60,8 +60,8 @@ struct PyEditorUI {
  * from base cimport *
  * 
  * cdef public class PyGameObject(PyCCObject) [object PyGameOb, type PyGameObj]:             # <<<<<<<<<<<<<<
- *     cdef GameObject* gameob_inst(self):
- *         return <GameObject*>self.inst
+ *     """
+ *     Represents an in-game object
  */
 struct PyGameOb {
   struct _CCObject __pyx_base;

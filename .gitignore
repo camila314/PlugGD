@@ -36,3 +36,5 @@
 
 # Macos be like
 **/.DS_Store
+__pycache__/
+doctest/

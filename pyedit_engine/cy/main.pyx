@@ -2,7 +2,10 @@
 from base cimport *
 
 cdef public class PyCCObject [object _CCObject, type __CCObject]:
+
+    ## Internal variable for interacting with GD
     cdef CCObject* inst
+    
     cdef CCObject* ob_inst(self):
         return self.inst
 

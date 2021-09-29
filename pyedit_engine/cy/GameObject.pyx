@@ -3,6 +3,10 @@
 from base cimport *
 
 cdef public class PyGameObject(PyCCObject) [object PyGameOb, type PyGameObj]:
+    """
+    Represents an in-game object
+    """
+    
     cdef GameObject* gameob_inst(self):
         return <GameObject*>self.inst
 

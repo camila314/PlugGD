@@ -77,7 +77,12 @@ namespace engine {
                 
                 FILE* fp = fopen(file, "r");
                 if (!fp) {
+                    printf("kinda bullshit if you ask me\n");
                     engineQueue.pop_back();
+                    PyErr_Print();
+                    threadSafety.lock();
+                    pyRunning = false;
+                    threadSafety.unlock();
                     continue;
                 }
                 PyRun_SimpleString("(lambda x:[globals().clear(),globals().update({'global_storage': x})])(global_storage)\nfrom EditorUI import *\n");
@@ -87,6 +92,7 @@ namespace engine {
                     printf("are you fucking serious rn\n");
                     engineQueue.pop_back();
                     PyErr_Print();
+                    PyRun_SimpleString("print(\"this is stpid\")");
                     threadSafety.lock();
                     pyRunning = false;
                     threadSafety.unlock();
