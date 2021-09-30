@@ -17,7 +17,7 @@ if(APPLE)
 		Cacao/include/cocos2dext
 		Cacao/include/cocos2dx/custom/Sprites/CCMenuItemSpriteExtra
 	)
-else()
+else() 
 	set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Out")
 	set(CMAKE_BUILD_TYPE RelWithDebInfo)
 	add_definitions(-DCC_TARGET_OS_WIN32)

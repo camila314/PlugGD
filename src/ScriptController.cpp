@@ -115,8 +115,9 @@ bool ScriptController::refreshFiles(bool err) {
 		SHCreateDirectoryEx( NULL, plugFolder().c_str(), NULL );
 		#else
 		//todo fix this
-		if (err) FLAlertLayer::create(NULL, "Error parsing config", "Ok", NULL, "Cannot access script folder")->show();
-		return false;
+		mkdir(plugFolder().c_str(), 0777);
+		//if (err) FLAlertLayer::create(NULL, "Error parsing config", "Ok", NULL, "Cannot access script folder")->show();
+		//return false;
 		#endif
 	}
 	while (dir.has_next) {

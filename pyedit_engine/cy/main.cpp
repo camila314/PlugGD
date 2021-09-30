@@ -2668,19 +2668,19 @@ static const char __pyx_k_Editor___set___locals_lambda[] = "Editor.__set__.<loca
 static const char __pyx_k_teleportation_yellow_distance[] = "teleportation_yellow_distance";
 static const char __pyx_k_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0[] = "0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0";
 static const char __pyx_k_GameObjArray_object_has_no_attr[] = "'GameObjArray' object has no attribute '";
-static const char __pyx_k_Users_jakrillis_projects_pyedit[] = "/Users/jakrillis/projects/pyedit/pyedit_engine/cy/main.pyx";
+static const char __pyx_k_Y_pyedit_pyedit_engine_cy_PyLvl[] = "Y:\\pyedit\\pyedit_engine\\cy\\PyLvl.pyx";
 static const char __pyx_k_gameVersion_21_binaryVersion_35[] = "gameVersion=21&binaryVersion=35&gdw=0&levelID=%s&inc=0&extras=0&secret=Wmfd2893gb7";
 static const char __pyx_k_http_www_boomlings_com_database[] = "http://www.boomlings.com/database/getGJUsers20.php";
 static const char __pyx_k_thread_sync_locals_k_locals_why[] = "thread_sync.<locals>.k.<locals>.why";
 static const char __pyx_k_1_40_2_125_3_255_11_255_12_255_1[] = "1_40_2_125_3_255_11_255_12_255_13_255_4_-1_6_1000_7_1_15_1_18_0_8_1|1_0_2_102_3_255_11_255_12_255_13_255_4_-1_6_1001_7_1_15_1_18_0_8_1|1_0_2_102_3_255_11_255_12_255_13_255_4_-1_6_1009_7_1_15_1_18_0_8_1|1_255_2_255_3_255_11_255_12_255_13_255_4_-1_6_1002_5_1_7_1_15_1_18_0_8_1|1_0_2_255_3_125_11_255_12_255_13_255_4_-1_6_1005_5_1_7_1_15_1_18_0_8_1|1_0_2_255_3_125_11_255_12_255_13_255_4_-1_6_1006_5_1_7_1_15_1_18_0_8_1|1_0_2_0_3_0_11_255_12_255_13_255_4_-1_6_3_7_1_15_1_18_0_8_1|";
 static const char __pyx_k_H4sIAAAAAAAAEzOwNrQ20DMwsrY21DMz[] = "H4sIAAAAAAAAEzOwNrQ20DMwsrY21DMztbYGAJp7I8gQAAAA";
 static const char __pyx_k_Input_must_be_a_list_or_subclass[] = "Input must be a list or subclass of PyCCArray";
+static const char __pyx_k_Y_pyedit_pyedit_engine_cy_main_p[] = "Y:\\pyedit\\pyedit_engine\\cy\\main.pyx";
 static const char __pyx_k_application_x_www_form_urlencode[] = "application/x-www-form-urlencoded";
 static const char __pyx_k_http_boomlings_com_database_uplo[] = "http://boomlings.com/database/uploadGJLevel21.php";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
 static const char __pyx_k_self_inst_cannot_be_converted_to[] = "self.inst cannot be converted to a Python object for pickling";
 static const char __pyx_k_thread_async_locals_k_locals_lam[] = "thread_async.<locals>.k.<locals>.<lambda>";
-static const char __pyx_k_Users_jakrillis_projects_pyedit_2[] = "/Users/jakrillis/projects/pyedit/pyedit_engine/cy/PyLvl.pyx";
 static const char __pyx_k_http_www_boomlings_com_database_2[] = "http://www.boomlings.com/database/downloadGJLevel22.php";
 static PyObject *__pyx_kp_u_0;
 static PyObject *__pyx_kp_u_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0;
@@ -2882,12 +2882,12 @@ static PyObject *__pyx_n_u_TeleportPortalObject;
 static PyObject *__pyx_n_s_TypeError;
 static PyObject *__pyx_n_s_UFO;
 static PyObject *__pyx_kp_u_Unable_to_fetch_editor;
-static PyObject *__pyx_kp_s_Users_jakrillis_projects_pyedit;
-static PyObject *__pyx_kp_s_Users_jakrillis_projects_pyedit_2;
 static PyObject *__pyx_n_s_ValueError;
 static PyObject *__pyx_n_s_WAVE;
 static PyObject *__pyx_n_u_Wmfd2893gb7;
 static PyObject *__pyx_n_s_YELLOW;
+static PyObject *__pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl;
+static PyObject *__pyx_kp_s_Y_pyedit_pyedit_engine_cy_main_p;
 static PyObject *__pyx_kp_u__17;
 static PyObject *__pyx_kp_u__25;
 static PyObject *__pyx_kp_u__27;
@@ -20439,12 +20439,12 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
   {&__pyx_n_s_UFO, __pyx_k_UFO, sizeof(__pyx_k_UFO), 0, 0, 1, 1},
   {&__pyx_kp_u_Unable_to_fetch_editor, __pyx_k_Unable_to_fetch_editor, sizeof(__pyx_k_Unable_to_fetch_editor), 0, 1, 0, 0},
-  {&__pyx_kp_s_Users_jakrillis_projects_pyedit, __pyx_k_Users_jakrillis_projects_pyedit, sizeof(__pyx_k_Users_jakrillis_projects_pyedit), 0, 0, 1, 0},
-  {&__pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_k_Users_jakrillis_projects_pyedit_2, sizeof(__pyx_k_Users_jakrillis_projects_pyedit_2), 0, 0, 1, 0},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
   {&__pyx_n_s_WAVE, __pyx_k_WAVE, sizeof(__pyx_k_WAVE), 0, 0, 1, 1},
   {&__pyx_n_u_Wmfd2893gb7, __pyx_k_Wmfd2893gb7, sizeof(__pyx_k_Wmfd2893gb7), 0, 1, 0, 1},
   {&__pyx_n_s_YELLOW, __pyx_k_YELLOW, sizeof(__pyx_k_YELLOW), 0, 0, 1, 1},
+  {&__pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_k_Y_pyedit_pyedit_engine_cy_PyLvl, sizeof(__pyx_k_Y_pyedit_pyedit_engine_cy_PyLvl), 0, 0, 1, 0},
+  {&__pyx_kp_s_Y_pyedit_pyedit_engine_cy_main_p, __pyx_k_Y_pyedit_pyedit_engine_cy_main_p, sizeof(__pyx_k_Y_pyedit_pyedit_engine_cy_main_p), 0, 0, 1, 0},
   {&__pyx_kp_u__17, __pyx_k__17, sizeof(__pyx_k__17), 0, 1, 0, 0},
   {&__pyx_kp_u__25, __pyx_k__25, sizeof(__pyx_k__25), 0, 1, 0, 0},
   {&__pyx_kp_u__27, __pyx_k__27, sizeof(__pyx_k__27), 0, 1, 0, 0},
@@ -20884,7 +20884,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__3 = PyTuple_Pack(2, __pyx_n_s_a, __pyx_n_s_err); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(1, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit, __pyx_n_s_why, 37, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(1, 37, __pyx_L1_error)
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_main_p, __pyx_n_s_why, 37, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(1, 37, __pyx_L1_error)
 
   /* "main.pyx":47
  *         while len(future)==0:
@@ -20907,7 +20907,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__6 = PyTuple_Pack(6, __pyx_n_s_args, __pyx_n_s_kwargs, __pyx_n_s_future, __pyx_n_s_err, __pyx_n_s_why, __pyx_n_s_why); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(1, 32, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARARGS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit, __pyx_n_s_k, 32, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(1, 32, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARARGS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_main_p, __pyx_n_s_k, 32, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(1, 32, __pyx_L1_error)
 
   /* "main.pyx":53
  * 
@@ -20919,7 +20919,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__8 = PyTuple_Pack(2, __pyx_n_s_args, __pyx_n_s_kwargs); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(1, 53, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARARGS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit, __pyx_n_s_k, 53, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(1, 53, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARARGS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_main_p, __pyx_n_s_k, 53, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(1, 53, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/GDArray.pyx":8
  *     cdef CCArray* arr_inst(self):
@@ -21175,7 +21175,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__47 = PyTuple_Pack(3, __pyx_n_s_func, __pyx_n_s_k, __pyx_n_s_k); if (unlikely(!__pyx_tuple__47)) __PYX_ERR(1, 31, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__47);
   __Pyx_GIVEREF(__pyx_tuple__47);
-  __pyx_codeobj__48 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__47, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit, __pyx_n_s_thread_sync, 31, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__48)) __PYX_ERR(1, 31, __pyx_L1_error)
+  __pyx_codeobj__48 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__47, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_main_p, __pyx_n_s_thread_sync, 31, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__48)) __PYX_ERR(1, 31, __pyx_L1_error)
 
   /* "main.pyx":52
  *     return k
@@ -21187,7 +21187,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__49 = PyTuple_Pack(3, __pyx_n_s_func, __pyx_n_s_k, __pyx_n_s_k); if (unlikely(!__pyx_tuple__49)) __PYX_ERR(1, 52, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__49);
   __Pyx_GIVEREF(__pyx_tuple__49);
-  __pyx_codeobj__50 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__49, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit, __pyx_n_s_thread_async, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__50)) __PYX_ERR(1, 52, __pyx_L1_error)
+  __pyx_codeobj__50 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__49, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_main_p, __pyx_n_s_thread_async, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__50)) __PYX_ERR(1, 52, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":13
  * 	import urllib2
@@ -21199,7 +21199,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__52 = PyTuple_Pack(3, __pyx_n_s_encoded, __pyx_n_s_seed2, __pyx_n_s_i); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__52);
   __Pyx_GIVEREF(__pyx_tuple__52);
-  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_makeSeed, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_makeSeed, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 13, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":23
  * 			i+=1
@@ -21211,7 +21211,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__54 = PyTuple_Pack(3, __pyx_n_s_url, __pyx_n_s_p, __pyx_n_s_t); if (unlikely(!__pyx_tuple__54)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__54);
   __Pyx_GIVEREF(__pyx_tuple__54);
-  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_urlopen, 23, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_urlopen, 23, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 23, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":27
  * 	return urllib2.urlopen(t)
@@ -21223,7 +21223,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__56 = PyTuple_Pack(4, __pyx_n_s_username, __pyx_n_s_diction, __pyx_n_s_d, __pyx_n_s_r); if (unlikely(!__pyx_tuple__56)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__56);
   __Pyx_GIVEREF(__pyx_tuple__56);
-  __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__56, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_getAccountID, 27, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__56, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_getAccountID, 27, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(0, 27, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":36
  * 	try: return r.text.split(":")[21]
@@ -21235,7 +21235,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__58 = PyTuple_Pack(5, __pyx_n_s_data, __pyx_n_s_key, __pyx_n_s_xored, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__58)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__58);
   __Pyx_GIVEREF(__pyx_tuple__58);
-  __pyx_codeobj__59 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__58, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_xor, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__59)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_codeobj__59 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__58, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_xor, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__59)) __PYX_ERR(0, 36, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":42
  * 	items = {"1_9_color":"19","green":"8","player_color_1":"15","player_color_2":"16","text":"31","rotation_times_360":"69","target_group_id":"51","z_layer":"24","instant_count_comparison":"88","copy_opacity":"60","custom_rotation_speed":"97","substract_count":"78","pulse_target_type":"52","move_target_enabled":"100","count":"77","spawn_delay":"63","color1":"21","pulse_exclusive":"86","color2":"22","rotation":"6","group_ids":"57","follow_player_y_offset":"92","move_trigger_9_units":"29","multi_trigger":"87","rotation_lock":"70","red":"7","group_parent":"34","dont_enter":"67","touch_dual_mode":"89","spawn_triggered":"62","is_flipped_horizontal":"4","duration":"10","blue":"9","activate_group":"56","dynamic_block":"93","follow_player_y_delay":"91","move_lock_to_player_y":"59","move_lock_to_player_x":"58","target_color_id":"23","follow_y_mod":"73","follow_player_y_speed":"90","is_flipped_vertical":"5","touch_toggle":"82","item_id":"80","glow_disabled":"96","copied_color_hsv_values":"49","hold_mode":"81","pickup_mode":"79","editor_layer_2":"61","editor_layer_1":"20","pulse_detail_only":"66","hsv_enabled_1":"41","hsv_enabled_2":"42","shake_strength":"75","is_active_trigger_type":"36","move_target_pos_coordinates":"101","portal_checked":"13","teleportation_yellow_distance":"54","blending":"17","pulse_hold":"46","pulsing_animation_randomize":"106","size":"32","disable_rotation":"98","collision_block_b_id":"95","high_detail":"103","rotation_degrees":"68","pulse_main_only":"65","pulse_fade_out":"47","x_position":"2","z_order":"25","dont_fade":"64","easing_rate":"85","hsv_values_1":"43","hsv_values_2":"44","follow_x_mod":"72","pulse_fade_in":"45","spawn_editor_disable":"102","move_trigger_x_units":"28","blockid":"1","linked_group":"108","follow_player_y_max_speed":"105","touch_triggered":"11","opacity":"35","copied_color_id":"50","pulse_mode":"48","y_position":"3","shake_interval":"84","pulsing_animation_speed":"107","count_multi_activate":"99","easing":"30","follow_group_id":"71"}
@@ -21247,7 +21247,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__60 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_kwargs, __pyx_n_s_i); if (unlikely(!__pyx_tuple__60)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__60);
   __Pyx_GIVEREF(__pyx_tuple__60);
-  __pyx_codeobj__61 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__60, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_init_2, 42, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__61)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_codeobj__61 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__60, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_init_2, 42, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__61)) __PYX_ERR(0, 42, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":46
  * 		self.json = {"blockid":str(kwargs.get("blockid")),"x_position":str(kwargs.get("x_position")),"y_position":str(kwargs.get("y_position"))}
@@ -21259,7 +21259,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__62 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_e); if (unlikely(!__pyx_tuple__62)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__62);
   __Pyx_GIVEREF(__pyx_tuple__62);
-  __pyx_codeobj__63 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__62, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_getitem, 46, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__63)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_codeobj__63 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__62, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_getitem, 46, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__63)) __PYX_ERR(0, 46, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":51
  * 		else:
@@ -21271,7 +21271,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__64 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_e, __pyx_n_s_f); if (unlikely(!__pyx_tuple__64)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__64);
   __Pyx_GIVEREF(__pyx_tuple__64);
-  __pyx_codeobj__65 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__64, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_setitem, 51, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__65)) __PYX_ERR(0, 51, __pyx_L1_error)
+  __pyx_codeobj__65 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__64, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_setitem, 51, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__65)) __PYX_ERR(0, 51, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":53
  * 	def __setitem__(self,e,f):
@@ -21283,7 +21283,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__66 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_ar, __pyx_n_s_i); if (unlikely(!__pyx_tuple__66)) __PYX_ERR(0, 53, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__66);
   __Pyx_GIVEREF(__pyx_tuple__66);
-  __pyx_codeobj__67 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__66, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_str_2, 53, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__67)) __PYX_ERR(0, 53, __pyx_L1_error)
+  __pyx_codeobj__67 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__66, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_str_2, 53, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__67)) __PYX_ERR(0, 53, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":59
  * 			ar.append(str(self.json[i]))
@@ -21295,7 +21295,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__68 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_kwargs, __pyx_n_s_a, __pyx_n_s_i); if (unlikely(!__pyx_tuple__68)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__68);
   __Pyx_GIVEREF(__pyx_tuple__68);
-  __pyx_codeobj__69 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__68, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_change, 59, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__69)) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_codeobj__69 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__68, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_change, 59, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__69)) __PYX_ERR(0, 59, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":65
  * 		return a
@@ -21307,7 +21307,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__70 = PyTuple_Pack(8, __pyx_n_s_stri, __pyx_n_s_a, __pyx_n_s_evens, __pyx_n_s_odds, __pyx_n_s_jso, __pyx_n_s_x, __pyx_n_s_i, __pyx_n_s_bloc); if (unlikely(!__pyx_tuple__70)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__70);
   __Pyx_GIVEREF(__pyx_tuple__70);
-  __pyx_codeobj__71 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__70, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_blockFromString, 65, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__71)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_codeobj__71 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__70, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_blockFromString, 65, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__71)) __PYX_ERR(0, 65, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":76
  * 		bloc = Block(**jso)
@@ -21319,7 +21319,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__72 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__72)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__72);
   __Pyx_GIVEREF(__pyx_tuple__72);
-  __pyx_codeobj__73 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__72, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_repr, 76, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__73)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_codeobj__73 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__72, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_repr, 76, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__73)) __PYX_ERR(0, 76, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":78
  * 	def __repr__(self):
@@ -21331,7 +21331,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__74 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__74)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__74);
   __Pyx_GIVEREF(__pyx_tuple__74);
-  __pyx_codeobj__75 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__74, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_coords, 78, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__75)) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_codeobj__75 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__74, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_coords, 78, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__75)) __PYX_ERR(0, 78, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":80
  * 	def coords(self):
@@ -21343,7 +21343,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__76 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_x, __pyx_n_s_y); if (unlikely(!__pyx_tuple__76)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__76);
   __Pyx_GIVEREF(__pyx_tuple__76);
-  __pyx_codeobj__77 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__76, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_setCoords, 80, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__77)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_codeobj__77 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__76, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_setCoords, 80, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__77)) __PYX_ERR(0, 80, __pyx_L1_error)
   __pyx_tuple__78 = PyTuple_Pack(2, ((PyObject*)__pyx_n_u_d), ((PyObject*)__pyx_n_u_d)); if (unlikely(!__pyx_tuple__78)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__78);
   __Pyx_GIVEREF(__pyx_tuple__78);
@@ -21358,7 +21358,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__79 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_degrees, __pyx_n_s_rot); if (unlikely(!__pyx_tuple__79)) __PYX_ERR(0, 85, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__79);
   __Pyx_GIVEREF(__pyx_tuple__79);
-  __pyx_codeobj__80 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__79, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_rotate, 85, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__80)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_codeobj__80 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__79, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_rotate, 85, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__80)) __PYX_ERR(0, 85, __pyx_L1_error)
   __pyx_tuple__81 = PyTuple_Pack(1, ((PyObject*)__pyx_float_0_)); if (unlikely(!__pyx_tuple__81)) __PYX_ERR(0, 85, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__81);
   __Pyx_GIVEREF(__pyx_tuple__81);
@@ -21373,7 +21373,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__82 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_kwargs, __pyx_n_s_i); if (unlikely(!__pyx_tuple__82)) __PYX_ERR(0, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__82);
   __Pyx_GIVEREF(__pyx_tuple__82);
-  __pyx_codeobj__83 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__82, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_init_2, 90, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__83)) __PYX_ERR(0, 90, __pyx_L1_error)
+  __pyx_codeobj__83 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__82, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_init_2, 90, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__83)) __PYX_ERR(0, 90, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":94
  * 		for i in kwargs:
@@ -21385,7 +21385,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__84 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_e); if (unlikely(!__pyx_tuple__84)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__84);
   __Pyx_GIVEREF(__pyx_tuple__84);
-  __pyx_codeobj__85 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__84, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_getitem, 94, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__85)) __PYX_ERR(0, 94, __pyx_L1_error)
+  __pyx_codeobj__85 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__84, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_getitem, 94, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__85)) __PYX_ERR(0, 94, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":96
  * 	def __getitem__(self,e):
@@ -21397,7 +21397,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__86 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_e, __pyx_n_s_f); if (unlikely(!__pyx_tuple__86)) __PYX_ERR(0, 96, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__86);
   __Pyx_GIVEREF(__pyx_tuple__86);
-  __pyx_codeobj__87 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__86, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_setitem, 96, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__87)) __PYX_ERR(0, 96, __pyx_L1_error)
+  __pyx_codeobj__87 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__86, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_setitem, 96, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__87)) __PYX_ERR(0, 96, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":98
  * 	def __setitem__(self,e,f):
@@ -21409,7 +21409,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__88 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_ar, __pyx_n_s_i); if (unlikely(!__pyx_tuple__88)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__88);
   __Pyx_GIVEREF(__pyx_tuple__88);
-  __pyx_codeobj__89 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__88, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_str_2, 98, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__89)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __pyx_codeobj__89 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__88, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_str_2, 98, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__89)) __PYX_ERR(0, 98, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":104
  * 			ar.append(str(self.json[i]))
@@ -21421,7 +21421,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__90 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__90)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__90);
   __Pyx_GIVEREF(__pyx_tuple__90);
-  __pyx_codeobj__91 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__90, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_repr, 104, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__91)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_codeobj__91 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__90, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_repr, 104, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__91)) __PYX_ERR(0, 104, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":108
  * class Level:
@@ -21433,7 +21433,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__92 = PyTuple_Pack(2, __pyx_n_s_levelname, __pyx_n_s_lid); if (unlikely(!__pyx_tuple__92)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__92);
   __Pyx_GIVEREF(__pyx_tuple__92);
-  __pyx_codeobj__93 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__92, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_downloadLevel, 108, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__93)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_codeobj__93 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__92, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_downloadLevel, 108, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__93)) __PYX_ERR(0, 108, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":110
  * 	def downloadLevel(levelname,lid):
@@ -21445,7 +21445,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__94 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_ids, __pyx_n_s_i, __pyx_n_s_e); if (unlikely(!__pyx_tuple__94)) __PYX_ERR(0, 110, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__94);
   __Pyx_GIVEREF(__pyx_tuple__94);
-  __pyx_codeobj__95 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__94, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_getfGroupID, 110, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__95)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_codeobj__95 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__94, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_getfGroupID, 110, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__95)) __PYX_ERR(0, 110, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":120
  * 			if ids[i] != ids[i-1]+1:
@@ -21457,7 +21457,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__96 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_groupid, __pyx_n_s_out, __pyx_n_s_b, __pyx_n_s_gs); if (unlikely(!__pyx_tuple__96)) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__96);
   __Pyx_GIVEREF(__pyx_tuple__96);
-  __pyx_codeobj__97 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__96, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_blocksInGroup, 120, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__97)) __PYX_ERR(0, 120, __pyx_L1_error)
+  __pyx_codeobj__97 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__96, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_blocksInGroup, 120, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__97)) __PYX_ERR(0, 120, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":127
  * 				out.append(b)
@@ -21469,7 +21469,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__98 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_levelname, __pyx_n_s_kwargs); if (unlikely(!__pyx_tuple__98)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__98);
   __Pyx_GIVEREF(__pyx_tuple__98);
-  __pyx_codeobj__99 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__98, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_init_2, 127, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__99)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_codeobj__99 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__98, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_init_2, 127, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__99)) __PYX_ERR(0, 127, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":132
  * 		self.name = levelname
@@ -21481,7 +21481,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__100 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_a, __pyx_n_s_b, __pyx_n_s_c, __pyx_n_s_kwargs, __pyx_n_s_aa); if (unlikely(!__pyx_tuple__100)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__100);
   __Pyx_GIVEREF(__pyx_tuple__100);
-  __pyx_codeobj__101 = (PyObject*)__Pyx_PyCode_New(4, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__100, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_addBlock, 132, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__101)) __PYX_ERR(0, 132, __pyx_L1_error)
+  __pyx_codeobj__101 = (PyObject*)__Pyx_PyCode_New(4, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__100, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_addBlock, 132, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__101)) __PYX_ERR(0, 132, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":137
  * 		self.blocks.append(b)
@@ -21493,7 +21493,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__102 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_args, __pyx_n_s_i); if (unlikely(!__pyx_tuple__102)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__102);
   __Pyx_GIVEREF(__pyx_tuple__102);
-  __pyx_codeobj__103 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARARGS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__102, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_addBlocks, 137, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__103)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_codeobj__103 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARARGS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__102, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_addBlocks, 137, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__103)) __PYX_ERR(0, 137, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":141
  * 			if hasattr(i,'coords'):
@@ -21505,7 +21505,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__104 = PyTuple_Pack(17, __pyx_n_s_self, __pyx_n_s_username, __pyx_n_s_password, __pyx_n_s_description, __pyx_n_s_stars, __pyx_n_s_unlisted, __pyx_n_s_lpassword, __pyx_n_s_songid, __pyx_n_s_audiotrack, __pyx_n_s_twoPlayer, __pyx_n_s_fromString, __pyx_n_s_coins, __pyx_n_s_url, __pyx_n_s_version, __pyx_n_s_levelid, __pyx_n_s_seed2, __pyx_n_s_dictionary); if (unlikely(!__pyx_tuple__104)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__104);
   __Pyx_GIVEREF(__pyx_tuple__104);
-  __pyx_codeobj__105 = (PyObject*)__Pyx_PyCode_New(15, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__104, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_uploadLevel, 141, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__105)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __pyx_codeobj__105 = (PyObject*)__Pyx_PyCode_New(15, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__104, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_uploadLevel, 141, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__105)) __PYX_ERR(0, 141, __pyx_L1_error)
   __pyx_tuple__106 = PyTuple_Pack(12, ((PyObject*)__pyx_kp_u__25), ((PyObject *)__pyx_int_0), ((PyObject *)__pyx_int_0), ((PyObject *)__pyx_int_0), ((PyObject *)__pyx_int_0), ((PyObject *)__pyx_int_1), ((PyObject *)__pyx_int_0), ((PyObject *)Py_False), ((PyObject*)__pyx_kp_u_0), ((PyObject*)__pyx_kp_u_http_boomlings_com_database_uplo), ((PyObject *)__pyx_int_1), ((PyObject *)__pyx_int_0)); if (unlikely(!__pyx_tuple__106)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__106);
   __Pyx_GIVEREF(__pyx_tuple__106);
@@ -21520,7 +21520,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__107 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_x); if (unlikely(!__pyx_tuple__107)) __PYX_ERR(0, 150, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__107);
   __Pyx_GIVEREF(__pyx_tuple__107);
-  __pyx_codeobj__108 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__107, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_str_2, 150, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__108)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_codeobj__108 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__107, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_str_2, 150, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__108)) __PYX_ERR(0, 150, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":152
  * 	def __str__(self):
@@ -21532,7 +21532,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__109 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_data); if (unlikely(!__pyx_tuple__109)) __PYX_ERR(0, 152, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__109);
   __Pyx_GIVEREF(__pyx_tuple__109);
-  __pyx_codeobj__110 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__109, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_encodee, 152, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__110)) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_codeobj__110 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__109, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_encodee, 152, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__110)) __PYX_ERR(0, 152, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":155
  * 		data = base64.b64encode((gzip.compress(self.__str__().encode(),compresslevel=6)))
@@ -21544,7 +21544,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__111 = PyTuple_Pack(1, __pyx_n_s_lid); if (unlikely(!__pyx_tuple__111)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__111);
   __Pyx_GIVEREF(__pyx_tuple__111);
-  __pyx_codeobj__112 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__111, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_getSong, 155, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__112)) __PYX_ERR(0, 155, __pyx_L1_error)
+  __pyx_codeobj__112 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__111, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_getSong, 155, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__112)) __PYX_ERR(0, 155, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":157
  * def getSong(lid):
@@ -21556,7 +21556,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__113 = PyTuple_Pack(5, __pyx_n_s_levelname, __pyx_n_s_lstr, __pyx_n_s_a, __pyx_n_s_lst, __pyx_n_s_i); if (unlikely(!__pyx_tuple__113)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__113);
   __Pyx_GIVEREF(__pyx_tuple__113);
-  __pyx_codeobj__114 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__113, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_levelString, 157, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__114)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_codeobj__114 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__113, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_levelString, 157, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__114)) __PYX_ERR(0, 157, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyLvl.pyx":164
  * 		a.blocks.append(Block.blockFromString(i))
@@ -21568,7 +21568,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__115 = PyTuple_Pack(2, __pyx_n_s_levelname, __pyx_n_s_lid); if (unlikely(!__pyx_tuple__115)) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__115);
   __Pyx_GIVEREF(__pyx_tuple__115);
-  __pyx_codeobj__116 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__115, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_jakrillis_projects_pyedit_2, __pyx_n_s_downloadLevel, 164, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__116)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_codeobj__116 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__115, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Y_pyedit_pyedit_engine_cy_PyLvl, __pyx_n_s_downloadLevel, 164, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__116)) __PYX_ERR(0, 164, __pyx_L1_error)
 
   /* "../../pyedit_engine/cy/PyEvent.pyx":7
  * 

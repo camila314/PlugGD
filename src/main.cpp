@@ -163,7 +163,9 @@ void(__thiscall *swag_2::$returnToLastScene)(swag_2*, GJGameLevel* c) = nullptr;
 
 #if __APPLE__
 $apply();
+void test() {
 
+}
 #else
 void __fastcall idfk(void* dontcare, void* dontcare2) {
     scripter()->refreshFiles(false);
@@ -182,6 +184,13 @@ void inject() {
         MH_CreateHook(reinterpret_cast<LPVOID>(base+0x91a30), reinterpret_cast<void*&>(tmp2), reinterpret_cast<void**>(&swag::$keyDown));
         auto tmp3 = &swag::setupCreateMenu;
         MH_CreateHook(reinterpret_cast<LPVOID>(base+0x7caf0), reinterpret_cast<void*&>(tmp3), reinterpret_cast<void**>(&swag::$setupCreateMenu));
+    
+    #else
+        Dl_info info;
+        if (dladdr(reinterpret_cast<void*>(&test), &info)) {
+            std::string realpath = std::string(dirname(const_cast<char*>(info.dli_fname)))+"/PyMac/";
+            setenv("PYTHONHOME", realpath.c_str(), 1);
+        }
     #endif
 
     engine::init();
